@@ -1,0 +1,7 @@
+join angel center
+angel: Thank you for playing. I hope you learned something and had fun. See ya!
+label end
+angel: Do you want to play again?
+- Sure, let's go!
+	jump 00timeline/
+- No.

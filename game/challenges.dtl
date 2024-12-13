@@ -1,0 +1,11 @@
+join angel center
+angel: It's time for a challenge! Are you ready?
+- No
+	angel: I understand. You can always come back when you are ready.
+	<Empty Text Event>
+	<Empty Text Event>
+	[end_timeline]
+- Yes
+	angel: Okay here we go\: Pick one of the following challenges that you want to try out.
+	- Find positive things
+	- 

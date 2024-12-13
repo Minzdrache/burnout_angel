@@ -1,0 +1,23 @@
+# Self care routine dialog.
+# Learn how to save a gratitude journal (outside of dialogic) and access it in dialogic)
+[style name="style1"]
+join angel center
+angel: I'm glad you want to know more about self care routines! They can help you focus on your strength and....\
+Which self care routine would you like to talk about?
+- gratitude journal
+	angel: Do you want to know more about the gratitude journal?
+	- Sure!
+		angel: a gratitude journal is....
+		[text_input text="What are you grateful for today?" var="gratitudeJournal" placeholder="My guardian angel."]
+	- No, just want to write it.
+		[text_input text="What are you grateful for today?" var="gratitudeJournal" placeholder="My Dad."]
+- going for a walk
+	angel: A walk has many positive ... The fresh air helps your brain. The surrounding nature calms your thought.
+	angel: Let's go for a walk!
+	- Sure!
+		[style]
+	- No.
+		return
+set {stress} -= 10
+set {mood} += 10
+angel: With this knowledge ....
