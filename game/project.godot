@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="dialog2"
-run/main_scene="res://scene1.tscn"
+config/name="burnout_angel"
+run/main_scene="res://scenes/scene1.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -22,16 +22,18 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"angel": "res://Bilder/angel.dch",
-"character": "res://character.dch"
+"angel": "res://characters/angel.dch",
+"lory": "res://characters/lory.dch"
 }
 directories/dtl_directory={
 "000triggers": "res://timelines/000triggeres.dtl",
 "001start": "res://timelines/001start.dtl",
 "002first_day": "res://timelines/002first_day.dtl",
-"100self_care": "res://timelines/100self_care.dtl",
+"101calendar": "res://timelines/101calendar.dtl",
+"102self_care": "res://timelines/102self_care.dtl",
+"110challenges": "res://timelines/110challenges.dtl",
 "90end": "res://timelines/90end.dtl",
-"challenges": "res://challenges.dtl"
+"test": "res://test.dtl"
 }
 variables={
 "activity": "",
@@ -41,7 +43,7 @@ variables={
 "stress": 99,
 "willpower": 5
 }
-layout/style_list=["res://style1.tres", "res://visual_novel_style.tres"]
+layout/style_list=["res://textbox_styles/style1.tres", "res://textbox_styles/picture.tres"]
 layout/default_style="res://style1.tres"
 
 [editor_plugins]

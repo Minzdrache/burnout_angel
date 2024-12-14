@@ -1,5 +1,5 @@
+[style name="style1"]
 # The first timeline. Gives trigger warnings, checks players mood.
-[style name="visual_novel_style"]
 join angel center
 angel: Hello and welcome to "Burnout Angel".  This game is about a young woman struggling with burnout. You will learn about burnout symptoms and consequences. With the help of an angel you can try out self-care routines and find a way to take care of your needs.
 angel: Trigger Warning\:\
@@ -10,18 +10,18 @@ angel: Feelings help us identify topics that are important in our lives. They dr
 Sharing feelings allows us to stay connected with others and offer mutual support. However, ignoring or suppressing feelings can lead to stress and burnout. Understanding emotions helps us process and regulate them, which contributes to better mental and physical well-being.\
 All feelings are valid. They are temporary states that help us navigate life’s challenges and joys. Recognizing them is the first step toward addressing their underlying causes and taking meaningful action.
 label moodcheck
-angel: How are you feeling right now? 
+angel: How are you feeling right now?
 # maybe provide a list of emotions to choose from. Store the mood in an outside variable and add a number (each time the mood gets saved, increse by 1), is to make as statistic about the users feelings
 - positive
 	- excited
 	- content
 	- happy
-	angel: That's great! I am glad you are in a good mood. 
+	angel: That's great! I am glad you are in a good mood.
 - neutral
 	- tired
 	- bored
 	- unsure
-	angel: That's an ok way to start. I hope this game brings fun and excitement. 
+	angel: That's an ok way to start. I hope this game brings fun and excitement.
 - negative
 	- stressed
 	- sad
@@ -36,12 +36,11 @@ Are you ready to start the game?
 	Let's start the game!
 	[wait time="1.0"]
 	leave angel
-	jump 00timeline/
+	jump 001start/
 - No, I want to check out some help.
 	# Maybe make a seperate timeline/scene just for getting help. 
 	label get help
 	angel: Here are some helpful ressources\: \
- In Germany you can call the 112 for emergencies. They can help you get help.\
+In Germany you can call the 112 for emergencies. They can help you get help.\
 When you are feeling better you can come back and start the game.
 	jump 90end/end
-- 
