@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://btg14y20vjhsw"]
+[gd_scene load_steps=11 format=3 uid="uid://btg14y20vjhsw"]
 
 [ext_resource type="Script" path="res://scenes/self_care.gd" id="1_14jph"]
-[ext_resource type="PackedScene" uid="uid://cxxcqq25p8hn3" path="res://scenes/draggable.tscn" id="1_35w7x"]
 [ext_resource type="Texture2D" uid="uid://1mb1hy1xlyjb" path="res://Bilder/Play.png" id="1_fk8an"]
 [ext_resource type="Texture2D" uid="uid://c3t55md578twq" path="res://Bilder/Fall (32x32).png" id="2_5xjys"]
 [ext_resource type="Script" path="res://scenes/daily_planner.gd" id="3_wht51"]
-[ext_resource type="Script" path="res://scenes/source_container.gd" id="5_1mj5i"]
+[ext_resource type="Script" path="res://scenes/draggable.gd" id="4_fqlml"]
 [ext_resource type="Script" path="res://scenes/target_button.gd" id="5_egs88"]
 [ext_resource type="Script" path="res://scenes/morning.gd" id="7_m6hvt"]
 
@@ -20,17 +19,18 @@ size = Vector2(340, 36)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Draggable" parent="." instance=ExtResource("1_35w7x")]
-offset_left = 919.0
-offset_top = 144.0
-offset_right = 1029.0
-offset_bottom = 171.0
+[node name="Draggable" type="ColorRect" parent="."]
+offset_left = 898.0
+offset_top = 45.0
+offset_right = 1008.0
+offset_bottom = 72.0
+script = ExtResource("4_fqlml")
 
 [node name="self_care" type="Button" parent="."]
-offset_left = 944.0
-offset_top = 303.0
-offset_right = 1079.0
-offset_bottom = 334.0
+offset_left = 701.0
+offset_top = 203.0
+offset_right = 836.0
+offset_bottom = 234.0
 text = "self-care routine"
 script = ExtResource("1_14jph")
 
@@ -42,17 +42,17 @@ offset_bottom = 370.0
 text = "visit doctor"
 
 [node name="Button3" type="Button" parent="."]
-offset_left = 833.0
-offset_top = 206.0
-offset_right = 977.0
-offset_bottom = 237.0
+offset_left = 899.0
+offset_top = 144.0
+offset_right = 1043.0
+offset_bottom = 175.0
 text = "read book"
 
 [node name="Button4" type="Button" parent="."]
-offset_left = 942.0
-offset_top = 254.0
-offset_right = 1107.0
-offset_bottom = 285.0
+offset_left = 686.0
+offset_top = 114.0
+offset_right = 851.0
+offset_bottom = 145.0
 text = "go grocery shopping"
 
 [node name="TextureButton" type="TextureButton" parent="."]
@@ -62,23 +62,6 @@ offset_right = 970.0
 offset_bottom = 383.0
 texture_normal = ExtResource("1_fk8an")
 texture_pressed = ExtResource("2_5xjys")
-
-[node name="source_container" type="Container" parent="."]
-offset_left = 528.0
-offset_top = 98.0
-offset_right = 826.0
-offset_bottom = 234.0
-script = ExtResource("5_1mj5i")
-
-[node name="ColorRect" type="ColorRect" parent="source_container"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0.243231, 0.729483, 0.653836, 1)
-
-[node name="rows" type="VBoxContainer" parent="source_container"]
-layout_mode = 2
 
 [node name="target_button" type="Button" parent="."]
 offset_left = 195.0

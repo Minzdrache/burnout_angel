@@ -1,10 +1,27 @@
 [gd_scene load_steps=4 format=3 uid="uid://cyr1qeeq3kbif"]
 
-[ext_resource type="Texture2D" uid="uid://tcpeyc0s46sb" path="res://Bilder/Galaxie4.png" id="1_wxly5"]
+[ext_resource type="Texture2D" uid="uid://d33o13quxdcl5" path="res://Bilder/Idle.png" id="1_qv3vw"]
 [ext_resource type="Script" path="res://button.gd" id="2_bmenx"]
 
 [sub_resource type="GDScript" id="GDScript_bx54j"]
-script/source = "extends Node2D
+script/source = "## this is the main game scene
+## all other scenes should be children 
+## saves weekly/daily plannings
+## saves stats
+## saves diary
+
+extends Node2D
+# A dictionary to store daily plans
+var weekly_plan = {
+	\"Monday\": [],
+	\"Tuesday\": [],
+	\"Wednesday\": [],
+	\"Thursday\": [],
+	\"Friday\": [],
+	\"Saturday\": [],
+	\"Sunday\": []
+}
+var daily_plan = []
 "
 
 [node name="Node2D" type="Node2D"]
@@ -16,7 +33,7 @@ offset_left = 2.0
 offset_top = 3.0
 offset_right = 1152.0
 offset_bottom = 645.0
-texture = ExtResource("1_wxly5")
+texture = ExtResource("1_qv3vw")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="TextureRect"]

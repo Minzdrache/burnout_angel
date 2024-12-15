@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxxcqq25p8hn3"]
+
+[ext_resource type="Script" path="res://scenes/draggable.gd" id="1_rnutb"]
+
+[node name="Dragable" type="ColorRect"]
+offset_left = 898.0
+offset_top = 45.0
+offset_right = 1008.0
+offset_bottom = 72.0
+color = Color(0.405707, 0.725751, 0.484889, 1)
+script = ExtResource("1_rnutb")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 104.0
+offset_bottom = 24.0
+text = "drag me!"
