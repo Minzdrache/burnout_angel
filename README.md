@@ -15,3 +15,5 @@ progress:
     added small and big boxes in 2 scenes https://www.youtube.com/watch?v=cNvzGKCkNXg&t=447s
     (when the correct small box is put into the correct big box, the big box changes color )
     user can drag small boxes
+* 28.12.2024:
+    saved background images

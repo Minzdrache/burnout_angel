@@ -1,0 +1,10 @@
+The used Assets were not edited in any way.
+
+
+backgrounds:
+* lounge by spiral atlas (downloaded from: https://spiralatlas.itch.io/house-visual-novel-backgrounds), License: CC BY 4.0. https://creativecommons.org/licenses/by/4.0/
+* single bedroom by spiral atlas (downloaded from: https://spiralatlas.itch.io/house-visual-novel-backgrounds), License: CC BY 4.0. https://creativecommons.org/licenses/by/4.0/
+* outside by Noraneko Games (downloaded from: https://noranekogames.itch.io/yumebackground)
+* celestial by screentones (downloaded from: https://www.deviantart.com/screentones/art/Clouds-Color-Stock-760600339) 
+* celestial2 by screentones (downloaded from: https://www.deviantart.com/screentones/art/Clouds2-833363174)
+* doctor office by binbinek (downloaded from: https://www.deviantart.com/binbinek/art/00-1112163006)

@@ -1,4 +1,5 @@
 # stat bars appear
+[background arg="res://Bilder/Noraneko_Backgrounds_Pack_2/Bedroom_Day.png" fade="0.0"]
 # The third timeline. The first day after the emergency. 
 # explain what burnout is? 
 join lory left
@@ -13,7 +14,7 @@ angel: These are your status bars. They represent the most important parts of yo
 # blue willpower, with example?
 angel: This blue one is your Willpower. It represents your energy and drive to get things done. When it’s high, you feel capable and motivated. But when it’s low, even small tasks can feel impossible.
 lory: That makes sense… Sometimes I feel like I can’t even start the simplest things.
-angel: Exactly. You’ll need to replenish it with rest and moments of joy to keep going. 
+angel: Exactly. You’ll need to replenish it with rest and moments of joy to keep going.
 # red stress
 angel: This red one is your Stress. It builds up from overwhelming tasks, difficult situations, or ignoring your needs. If it gets too high, it will drain your other bars and leave you exhausted.
 lory: So stress eats away at everything else? I feel that all the time.
