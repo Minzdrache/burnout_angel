@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://c3t55md578twq" path="res://Bilder/Fall (32x32).png" id="2_5xjys"]
 [ext_resource type="Script" path="res://scenes/daily_planner.gd" id="3_wht51"]
 [ext_resource type="Script" path="res://scenes/source_container.gd" id="5_1mj5i"]
-[ext_resource type="Script" path="res://scenes/target_button.gd" id="5_egs88"]
 [ext_resource type="Script" path="res://scenes/morning.gd" id="7_m6hvt"]
+[ext_resource type="Script" path="res://scenes/target_container.gd" id="9_iro0o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vr7qa"]
 size = Vector2(341, 45)
@@ -21,10 +21,10 @@ size = Vector2(340, 36)
 [node name="Node2D" type="Node2D"]
 
 [node name="Draggable" parent="." instance=ExtResource("1_35w7x")]
-offset_left = 919.0
-offset_top = 144.0
-offset_right = 1029.0
-offset_bottom = 171.0
+offset_left = 1080.0
+offset_top = 15.0
+offset_right = 1190.0
+offset_bottom = 42.0
 
 [node name="self_care" type="Button" parent="."]
 offset_left = 944.0
@@ -64,29 +64,29 @@ texture_normal = ExtResource("1_fk8an")
 texture_pressed = ExtResource("2_5xjys")
 
 [node name="source_container" type="Container" parent="."]
-offset_left = 528.0
-offset_top = 98.0
-offset_right = 826.0
-offset_bottom = 234.0
+custom_minimum_size = Vector2(100, 100)
+offset_left = 333.0
+offset_top = 21.0
+offset_right = 770.0
+offset_bottom = 121.0
 script = ExtResource("5_1mj5i")
 
 [node name="ColorRect" type="ColorRect" parent="source_container"]
-custom_minimum_size = Vector2(20, 20)
+custom_minimum_size = Vector2(200, 100)
+layout_direction = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 6.0
 color = Color(0.243231, 0.729483, 0.653836, 1)
 
 [node name="rows" type="VBoxContainer" parent="source_container"]
+custom_minimum_size = Vector2(200, 90)
 layout_mode = 2
-
-[node name="target_button" type="Button" parent="."]
-offset_left = 195.0
-offset_top = 52.0
-offset_right = 526.0
-offset_bottom = 238.0
-text = "drop your stuff here"
-script = ExtResource("5_egs88")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+alignment = 1
 
 [node name="daily_planner" type="VBoxContainer" parent="."]
 offset_left = 207.0
@@ -128,3 +128,19 @@ position = Vector2(171, 17)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="daily_planner/evening/Area2D"]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_8erui")
+
+[node name="target_container" type="Container" parent="."]
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 261.0
+script = ExtResource("9_iro0o")
+
+[node name="ColorRect" type="ColorRect" parent="target_container"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="rows" type="VBoxContainer" parent="target_container"]
+custom_minimum_size = Vector2(200, 300)
+layout_mode = 2

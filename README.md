@@ -17,3 +17,5 @@ progress:
     user can drag small boxes
 * 28.12.2024:
     saved background images
+* 02.01.2025: 
+    Drag and Drop works from one source_container to one target_container

@@ -1,6 +1,6 @@
 extends Container
 
-var draggable_scene: PackedScene 
+var draggable_scene: PackedScene
 var drop_target: Node
 var draggable_container: VBoxContainer
 
@@ -10,34 +10,35 @@ var draggables = [
 	{"id": 3, "label": "three"}
 ]
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	draggable_scene = preload("res://scenes/draggable.tscn")
-	drop_target = get_node("../target_button")
+	drop_target = get_node("../target_container")
 	draggable_container = $rows
 
-	# Populate draggables when the scene is ready
-	_populate_draggables()
+	if draggable_container == null:
+		print("[Error] Failed to find 'rows' node in source_container. Check your scene tree!")
+		return
 
-	# Connect the signal properly
+	print("[Debug] draggable_container initialized successfully: ", draggable_container)
+
+	_populate_draggables()
 	drop_target.connect("item_dropped_on_target", Callable(self, "_on_item_dropped_on_target"))
 
-
-# Populates the draggable items in the container
 func _populate_draggables():
-	for draggable in draggables: 
+	if draggable_container == null:
+		print("[Error] Cannot populate; draggable_container is null.")
+		return
+
+	for draggable in draggables:
 		var drag_item = draggable_scene.instantiate()
-		# Ensure drag_item has the correct properties set
 		drag_item.id = draggable["id"]
 		drag_item.label = draggable["label"]
 		draggable_container.add_child(drag_item)
 
-# Called when an item is dropped on the target
 func _on_item_dropped_on_target(dropped_item: Node) -> void:
-	# Ensure dropped_item is a Draggable (type casting is necessary in Godot)
 	var dropped_draggable = dropped_item as Draggable
 	if not dropped_draggable:
-		return # Exit if the dropped item is not a Draggable
+		return
 
 	for drag_item in draggable_container.get_children():
 		var current_draggable = drag_item as Draggable

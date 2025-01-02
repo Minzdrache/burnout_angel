@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scenes/draggable.gd" id="1_rnutb"]
 
 [node name="Dragable" type="ColorRect"]
+custom_minimum_size = Vector2(50, 20)
 offset_left = 898.0
 offset_top = 45.0
 offset_right = 1008.0
