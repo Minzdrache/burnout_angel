@@ -21,3 +21,4 @@ progress:
     Drag and Drop works from one source_container to one target_container
     added main_menu https://www.youtube.com/watch?v=zHYkcJyE52g more good stuff on: https://cococode.net/godot
     added font for title
+    made first visual progress bar
