@@ -1,0 +1,84 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgpqovgrvaw2l"]
+
+[ext_resource type="Texture2D" uid="uid://y8caswi4iq7q" path="res://Bilder/celestial.jpg" id="1_ghdex"]
+[ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="2_1jn8v"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kg8b0"]
+texture = ExtResource("1_ghdex")
+modulate_color = Color(0.505344, 0.505344, 0.505344, 1)
+
+[node name="options" type="Node2D"]
+
+[node name="background" type="Panel" parent="."]
+custom_minimum_size = Vector2(400, 400)
+anchors_preset = -1
+offset_left = -4.0
+offset_top = -1.0
+offset_right = 1148.0
+offset_bottom = 647.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_kg8b0")
+
+[node name="credits" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 230.0
+offset_top = 172.0
+offset_right = 892.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+text = "Credits: 
+
+Author: Luisa Friebel
+
+
+
+Used resources:"
+
+[node name="help" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 658.0
+offset_top = 159.0
+offset_right = 1224.0
+offset_bottom = 437.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+text = "Help:
+In Germany you can call 122.......
+Helpful websites: 
+* www.telefonseelsorge.de"
+
+[node name="menu" type="Button" parent="."]
+offset_left = 995.0
+offset_top = 575.0
+offset_right = 1126.0
+offset_bottom = 626.0
+text = "Menu
+"
+
+[node name="title" type="Label" parent="."]
+offset_left = 285.0
+offset_top = 51.0
+offset_right = 832.0
+offset_bottom = 112.0
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0.341176, 0.537255, 0.537255, 1)
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("2_1jn8v")
+theme_override_font_sizes/font_size = 60
+text = "Burnout Angel"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

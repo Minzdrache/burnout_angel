@@ -22,6 +22,13 @@ var weekly_plan = {
 	\"Sunday\": []
 }
 var daily_plan = []
+var activities = [
+	{\"label\": \"Talk to doctor\", \"stat_change\": {\"mood\": 5, \"willpower\": -3}},
+	{\"label\": \"Do a self-care routine\", \"stat_change\": {\"mood\": 10, \"willpower\": -5}},
+	{\"label\": \"Go for a walk\", \"stat_change\": {\"mood\": 7, \"willpower\": -2}},
+	{\"label\": \"Read a book\", \"stat_change\": {\"mood\": 3, \"willpower\": -1}},
+	{\"label\": \"Work on a hobby\", \"stat_change\": {\"mood\": 6, \"willpower\": -4}}
+]
 "
 
 [node name="Node2D" type="Node2D"]
