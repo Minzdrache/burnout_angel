@@ -5,19 +5,19 @@ signal item_dropped_on_target(draggable)
 
 var draggable_scene: PackedScene = preload("res://scenes/draggable.tscn")
 var draggable_container: VBoxContainer
-var stats_manager: Node
 
 func _ready() -> void:
 	draggable_container = $rows  # Ensure this matches your scene structure
+
 	if draggable_container == null:
 		print("[Error] Failed to find 'rows' node in target_container. Check your scene tree!")
 		return
-	print("[Debug] draggable_container initialized successfully: ", draggable_container)
+	print("[target_container] draggable_container initialized successfully: ", draggable_container)
 
 func _can_drop_data(position: Vector2, data) -> bool:
 	# Validate the data
 	var can_drop: bool = data is Dictionary and "label" in data
-	print("[Debug] _can_drop_data has run, returning: %s" % can_drop)
+	print("[target_container] _can_drop_data has run, returning: %s" % can_drop)
 	return can_drop
 	
 func _drop_data(position: Vector2, data: Variant) -> void:
@@ -45,8 +45,11 @@ func _drop_data(position: Vector2, data: Variant) -> void:
 	# Emit the signal with the draggable instance
 	emit_signal("item_dropped_on_target", draggable_copy)
 
+	# Now, add the activity to the current day's list and update stats
 	if data.has("stat_change"):
-		activities_manager.add_activity_to_day(data["label"], data["stat_change"], activities_manager.current_day)
-		print("[Debug] Activity saved to day %d: %s" % [activities_manager.current_day, data["label"]])
-	
-	print(activities_manager.get_activities_per_day)
+		ActivitiesManager.add_activity_to_day(data["label"], data["stat_change"], ActivitiesManager.current_day)
+		print("[target_container] Activity saved to day %d: %s" % [ActivitiesManager.current_day, data["label"]])
+		
+		# Apply stat changes using the singleton StatsManager
+		StatsManager.apply_stat_changes(data["stat_change"])
+		print("[target_container] Stats updated: Mood = %d, Willpower = %d" % [StatsManager.stats["mood"], StatsManager.stats["willpower"]])

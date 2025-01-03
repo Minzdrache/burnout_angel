@@ -1,3 +1,4 @@
+# stats_manager is an autoload singleton
 extends Node
 
 # Player stats

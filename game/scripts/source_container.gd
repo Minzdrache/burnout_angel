@@ -14,7 +14,7 @@ func _ready() -> void:
 		print("[Error] Failed to find 'rows' node in source_container. Check your scene tree!")
 		return
 
-	print("[Debug] draggable_container initialized successfully: ", draggable_container)
+	print("[source_container] draggable_container initialized successfully: ", draggable_container)
 
 	_populate_draggables()
 	drop_target.connect("item_dropped_on_target", Callable(self, "_on_item_dropped_on_target"))
@@ -24,7 +24,7 @@ func _populate_draggables():
 		print("[Error] Cannot populate; draggable_container is null.")
 		return
 	# get activities from global list
-	for activity in activities_manager.activities:
+	for activity in ActivitiesManager.activities:
 		var drag_item = draggable_scene.instantiate()
 		drag_item.label = activity["label"]
 		drag_item.stat_change = activity["stat_change"]
@@ -42,3 +42,4 @@ func _on_item_dropped_on_target(dropped_item: Node) -> void:
 			draggable_container.remove_child(current_draggable)
 			current_draggable.queue_free()
 			break
+			

@@ -18,8 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-activities_manager="*res://global/activities_manager.gd"
-stats_manager="*res://global/stats_manager.gd"
+ActivitiesManager="*res://global/activities_manager.gd"
+StatsManager="*res://global/stats_manager.gd"
 
 [dialogic]
 
