@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bihwe704p6xmm"]
 
-[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_d0mbw"]
+[ext_resource type="Script" path="res://scripts/scene0_main_menu.gd" id="1_d0mbw"]
 [ext_resource type="Texture2D" uid="uid://y8caswi4iq7q" path="res://Bilder/celestial.jpg" id="1_sntc7"]
 [ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="2_axqly"]
 

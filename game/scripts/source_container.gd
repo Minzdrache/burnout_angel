@@ -4,11 +4,6 @@ var draggable_scene: PackedScene
 var drop_target: Node
 var draggable_container: VBoxContainer
 
-var draggables = [
-	{"id": 1, "label": "one"},
-	{"id": 2, "label": "two"},
-	{"id": 3, "label": "three"}
-]
 
 func _ready() -> void:
 	draggable_scene = preload("res://scenes/draggable.tscn")
@@ -28,11 +23,11 @@ func _populate_draggables():
 	if draggable_container == null:
 		print("[Error] Cannot populate; draggable_container is null.")
 		return
-
-	for draggable in draggables:
+	# get activities from global list
+	for activity in activities_manager.activities:
 		var drag_item = draggable_scene.instantiate()
-		drag_item.id = draggable["id"]
-		drag_item.label = draggable["label"]
+		drag_item.label = activity["label"]
+		#drag_item.stat_change = activity["stat_change"]
 		draggable_container.add_child(drag_item)
 
 func _on_item_dropped_on_target(dropped_item: Node) -> void:

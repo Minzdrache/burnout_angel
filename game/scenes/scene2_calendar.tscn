@@ -1,78 +1,27 @@
-[gd_scene load_steps=12 format=3 uid="uid://btg14y20vjhsw"]
+[gd_scene load_steps=3 format=3 uid="uid://btg14y20vjhsw"]
 
-[ext_resource type="Script" path="res://scenes/self_care.gd" id="1_14jph"]
-[ext_resource type="PackedScene" uid="uid://cxxcqq25p8hn3" path="res://scenes/draggable.tscn" id="1_35w7x"]
-[ext_resource type="Texture2D" uid="uid://1mb1hy1xlyjb" path="res://Bilder/Play.png" id="1_fk8an"]
-[ext_resource type="Texture2D" uid="uid://c3t55md578twq" path="res://Bilder/Fall (32x32).png" id="2_5xjys"]
-[ext_resource type="Script" path="res://scenes/daily_planner.gd" id="3_wht51"]
-[ext_resource type="Script" path="res://scenes/source_container.gd" id="5_1mj5i"]
-[ext_resource type="Script" path="res://scenes/morning.gd" id="7_m6hvt"]
-[ext_resource type="Script" path="res://scenes/target_container.gd" id="9_iro0o"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vr7qa"]
-size = Vector2(341, 45)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7lvi4"]
-size = Vector2(343.5, 35)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8erui"]
-size = Vector2(340, 36)
+[ext_resource type="Script" path="res://scripts/source_container.gd" id="5_1mj5i"]
+[ext_resource type="Script" path="res://scripts/target_container.gd" id="9_iro0o"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Draggable" parent="." instance=ExtResource("1_35w7x")]
-offset_left = 1080.0
-offset_top = 15.0
-offset_right = 1190.0
-offset_bottom = 42.0
-
-[node name="self_care" type="Button" parent="."]
-offset_left = 944.0
-offset_top = 303.0
-offset_right = 1079.0
-offset_bottom = 334.0
-text = "self-care routine"
-script = ExtResource("1_14jph")
-
-[node name="Button2" type="Button" parent="."]
-offset_left = 748.0
-offset_top = 339.0
-offset_right = 879.0
-offset_bottom = 370.0
-text = "visit doctor"
-
-[node name="Button3" type="Button" parent="."]
-offset_left = 833.0
-offset_top = 206.0
-offset_right = 977.0
-offset_bottom = 237.0
-text = "read book"
-
-[node name="Button4" type="Button" parent="."]
-offset_left = 942.0
-offset_top = 254.0
-offset_right = 1107.0
-offset_bottom = 285.0
-text = "go grocery shopping"
-
-[node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 949.0
-offset_top = 361.0
-offset_right = 970.0
-offset_bottom = 383.0
-texture_normal = ExtResource("1_fk8an")
-texture_pressed = ExtResource("2_5xjys")
+[node name="Label" type="Label" parent="."]
+offset_left = 746.0
+offset_top = 86.0
+offset_right = 881.0
+offset_bottom = 122.0
+text = "Activities"
 
 [node name="source_container" type="Container" parent="."]
 custom_minimum_size = Vector2(100, 100)
-offset_left = 333.0
-offset_top = 21.0
-offset_right = 770.0
-offset_bottom = 121.0
+offset_left = 745.0
+offset_top = 118.0
+offset_right = 1082.0
+offset_bottom = 533.0
 script = ExtResource("5_1mj5i")
 
 [node name="ColorRect" type="ColorRect" parent="source_container"]
-custom_minimum_size = Vector2(200, 100)
+custom_minimum_size = Vector2(200, 200)
 layout_direction = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -81,58 +30,18 @@ size_flags_stretch_ratio = 6.0
 color = Color(0.243231, 0.729483, 0.653836, 1)
 
 [node name="rows" type="VBoxContainer" parent="source_container"]
-custom_minimum_size = Vector2(200, 90)
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 alignment = 1
 
-[node name="daily_planner" type="VBoxContainer" parent="."]
-offset_left = 207.0
-offset_top = 288.0
-offset_right = 539.0
-offset_bottom = 398.0
-script = ExtResource("3_wht51")
-
-[node name="morning" type="Button" parent="daily_planner"]
-layout_mode = 2
-text = "Morning"
-script = ExtResource("7_m6hvt")
-
-[node name="Area2D" type="Area2D" parent="daily_planner/morning"]
-position = Vector2(164, 20)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="daily_planner/morning/Area2D"]
-position = Vector2(2, -8)
-shape = SubResource("RectangleShape2D_vr7qa")
-
-[node name="midday" type="Button" parent="daily_planner"]
-layout_mode = 2
-text = "Midday"
-
-[node name="Area2D" type="Area2D" parent="daily_planner/midday"]
-position = Vector2(167, 10)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="daily_planner/midday/Area2D"]
-position = Vector2(0.75, 9)
-shape = SubResource("RectangleShape2D_7lvi4")
-
-[node name="evening" type="Button" parent="daily_planner"]
-layout_mode = 2
-text = "Evening"
-
-[node name="Area2D" type="Area2D" parent="daily_planner/evening"]
-position = Vector2(171, 17)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="daily_planner/evening/Area2D"]
-position = Vector2(0, -1)
-shape = SubResource("RectangleShape2D_8erui")
-
 [node name="target_container" type="Container" parent="."]
-offset_top = 37.0
-offset_right = 274.0
-offset_bottom = 261.0
+offset_left = 218.0
+offset_top = 117.0
+offset_right = 492.0
+offset_bottom = 341.0
 script = ExtResource("9_iro0o")
 
 [node name="ColorRect" type="ColorRect" parent="target_container"]
@@ -144,3 +53,40 @@ size_flags_vertical = 3
 [node name="rows" type="VBoxContainer" parent="target_container"]
 custom_minimum_size = Vector2(200, 300)
 layout_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 218.0
+offset_top = 87.0
+offset_right = 442.0
+offset_bottom = 159.0
+text = "Plan for today
+"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 121.0
+offset_top = 123.0
+offset_right = 214.0
+offset_bottom = 146.0
+text = "Morning"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 123.0
+offset_top = 153.0
+offset_right = 216.0
+offset_bottom = 176.0
+text = "Midday"
+
+[node name="Label3" type="Label" parent="Label3"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 35.0
+offset_right = 90.0
+offset_bottom = 58.0
+text = "Afternoon"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 312.0
+offset_top = 472.0
+offset_right = 440.0
+offset_bottom = 503.0
+text = "Add Meditation"

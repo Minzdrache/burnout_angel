@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cxxcqq25p8hn3"]
 
-[ext_resource type="Script" path="res://scenes/draggable.gd" id="1_rnutb"]
+[ext_resource type="Script" path="res://scripts/draggable.gd" id="1_rnutb"]
 
 [node name="Dragable" type="ColorRect"]
 custom_minimum_size = Vector2(50, 20)

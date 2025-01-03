@@ -1,64 +1,123 @@
-[gd_scene load_steps=11 format=3 uid="uid://b8b4wuvjxyoop"]
+[gd_scene load_steps=12 format=3 uid="uid://b8b4wuvjxyoop"]
 
-[ext_resource type="Texture2D" uid="uid://y8caswi4iq7q" path="res://Bilder/celestial.jpg" id="1_36x3e"]
 [ext_resource type="Script" path="res://gui/health_bar.gd" id="2_ha60a"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bhyc"]
-texture = ExtResource("1_36x3e")
-modulate_color = Color(0.585062, 0.585062, 0.585062, 1)
+[ext_resource type="Script" path="res://scenes/stress_bar.gd" id="2_u7fsk"]
+[ext_resource type="Script" path="res://scenes/mood_bar.gd" id="3_rj4et"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xiul7"]
-bg_color = Color(0.105882, 0.270588, 0.207843, 0.509804)
+bg_color = Color(0.151252, 0.360462, 0.280638, 0.803922)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jn4n"]
 bg_color = Color(0.441258, 0.655071, 0.554694, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_uk0j1"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2gnsa"]
+bg_color = Color(0.143974, 0.269077, 0.497039, 0.803922)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
-[sub_resource type="Curve" id="Curve_1347d"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4aosh"]
+bg_color = Color(0.299417, 0.561989, 0.771552, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
-[sub_resource type="CurveTexture" id="CurveTexture_j30hq"]
-curve = SubResource("Curve_1347d")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cfntk"]
+bg_color = Color(0.435294, 0.192157, 0.176471, 0.803922)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
-[sub_resource type="Gradient" id="Gradient_y0m74"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vt54n"]
+bg_color = Color(0.831373, 0.368627, 0.372549, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_pwtaa"]
-gradient = SubResource("Gradient_y0m74")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qe3l"]
+bg_color = Color(0.35726, 0.314819, 0.11525, 0.803922)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t5ecx"]
+bg_color = Color(0.683267, 0.596631, 0.267409, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="stats_test_scene" type="Node2D"]
-
-[node name="Panel" type="Panel" parent="."]
-custom_minimum_size = Vector2(400, 400)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -5.0
-offset_top = -1.0
-offset_right = 1153.0
-offset_bottom = 655.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_6bhyc")
 
 [node name="health_bar" type="ProgressBar" parent="."]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 838.0
-offset_top = 18.0
-offset_right = 1125.0
-offset_bottom = 45.0
+offset_left = 1102.0
+offset_top = 256.0
+offset_right = 1288.0
+offset_bottom = 280.0
 grow_horizontal = 0
+rotation = -1.5708
 theme_override_styles/background = SubResource("StyleBoxFlat_xiul7")
 theme_override_styles/fill = SubResource("StyleBoxFlat_8jn4n")
 value = 20.0
 script = ExtResource("2_ha60a")
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-offset_left = 204.0
-offset_top = 517.0
-offset_right = 896.0
+[node name="willpower_bar" type="ProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 25.0
+offset_top = 256.0
+offset_right = 211.0
+offset_bottom = 280.0
+grow_horizontal = 0
+rotation = -1.5708
+theme_override_styles/background = SubResource("StyleBoxFlat_2gnsa")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4aosh")
+value = 20.0
+script = ExtResource("2_ha60a")
+
+[node name="stress_bar" type="ProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 25.0
+offset_top = 533.0
+offset_right = 211.0
 offset_bottom = 557.0
-texture_under = SubResource("PlaceholderTexture2D_uk0j1")
-texture_over = SubResource("CurveTexture_j30hq")
-texture_progress = SubResource("GradientTexture1D_pwtaa")
+grow_horizontal = 0
+rotation = -1.5708
+theme_override_styles/background = SubResource("StyleBoxFlat_cfntk")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vt54n")
+value = 20.0
+script = ExtResource("2_u7fsk")
+
+[node name="mood_bar" type="ProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 1102.0
+offset_top = 533.0
+offset_right = 1288.0
+offset_bottom = 557.0
+grow_horizontal = 0
+rotation = -1.5708
+theme_override_styles/background = SubResource("StyleBoxFlat_7qe3l")
+theme_override_styles/fill = SubResource("StyleBoxFlat_t5ecx")
+value = 20.0
+script = ExtResource("3_rj4et")

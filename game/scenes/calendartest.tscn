@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://c3t55md578twq" path="res://Bilder/Fall (32x32).png" id="1_et10x"]
 [ext_resource type="Texture2D" uid="uid://1mb1hy1xlyjb" path="res://Bilder/Play.png" id="1_nw5xx"]
-[ext_resource type="Script" path="res://scenes/calendar_item.gd" id="1_wykj1"]
-[ext_resource type="Script" path="res://scenes/movable.gd" id="1_ysuxr"]
+[ext_resource type="Script" path="res://scripts/calendar_item.gd" id="1_wykj1"]
+[ext_resource type="Script" path="res://scripts/movable.gd" id="1_ysuxr"]
 [ext_resource type="Texture2D" uid="uid://d33o13quxdcl5" path="res://Bilder/Idle.png" id="2_nl8pe"]
-[ext_resource type="Script" path="res://scenes/bigbox_2.gd" id="3_bp2s8"]
-[ext_resource type="Script" path="res://scenes/bigbox.gd" id="5_3e6xk"]
-[ext_resource type="Script" path="res://scenes/calendar_item_2.gd" id="6_2xw5c"]
-[ext_resource type="PackedScene" uid="uid://dy8wxf61u0pqe" path="res://scenes/calendar_item_scene.tscn" id="7_samgy"]
+[ext_resource type="Script" path="res://scripts/bigbox_2.gd" id="3_bp2s8"]
+[ext_resource type="Script" path="res://scripts/bigbox.gd" id="5_3e6xk"]
+[ext_resource type="Script" path="res://scripts/calendar_item_2.gd" id="6_2xw5c"]
+[ext_resource type="PackedScene" path="res://scenes/calendar_item_scene.tscn" id="7_samgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mpk5d"]
 size = Vector2(199.5, 82.5313)
