@@ -27,8 +27,9 @@ func _populate_draggables():
 	for activity in activities_manager.activities:
 		var drag_item = draggable_scene.instantiate()
 		drag_item.label = activity["label"]
-		#drag_item.stat_change = activity["stat_change"]
+		drag_item.stat_change = activity["stat_change"]
 		draggable_container.add_child(drag_item)
+
 
 func _on_item_dropped_on_target(dropped_item: Node) -> void:
 	var dropped_draggable = dropped_item as Draggable
@@ -37,7 +38,7 @@ func _on_item_dropped_on_target(dropped_item: Node) -> void:
 
 	for drag_item in draggable_container.get_children():
 		var current_draggable = drag_item as Draggable
-		if current_draggable and current_draggable.id == dropped_draggable.id:
+		if current_draggable and current_draggable.label == dropped_draggable.label:
 			draggable_container.remove_child(current_draggable)
 			current_draggable.queue_free()
 			break

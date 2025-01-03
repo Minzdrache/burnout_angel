@@ -1,10 +1,10 @@
 extends ColorRect
 class_name Draggable
 
-var id: int
-var label: String
-# true once we've been dropped on target
-var dropped_on_target: bool = false
+var label: String       # Activity name
+var stat_change: Dictionary = {}  # Stat changes for this activity
+
+var dropped_on_target: bool = false # true once we've been dropped on target
 
 func _ready() -> void:
 	add_to_group("DRAGGABLE")
@@ -17,8 +17,8 @@ func _get_drag_data(at_position: Vector2):
 	print("[Draggable] _get_drag_data has run")
 	if not dropped_on_target:
 		set_drag_preview(_get_preview_control())
-		# Return a dictionary with id and label for the target to process
-		return {"id": id, "label": label}
+		# Return a dictionary with label for the target to process
+		return {"label": label, "stat_change": stat_change}
 
 func _get_preview_control() -> Control:
 	"""
