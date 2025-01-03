@@ -90,3 +90,11 @@ offset_top = 472.0
 offset_right = 440.0
 offset_bottom = 503.0
 text = "Add Meditation"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 124.0
+offset_top = 526.0
+offset_right = 661.0
+offset_bottom = 627.0
+text = "You can add 3 activities for today. 
+Once an activity is selected in the \"Plan for today\" you can't change it."

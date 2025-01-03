@@ -21,6 +21,11 @@ func _can_drop_data(position: Vector2, data) -> bool:
 	return can_drop
 	
 func _drop_data(position: Vector2, data: Variant) -> void:
+	# Check if the current day already has 3 activities
+	var current_day_activities = ActivitiesManager.get_activities_per_day()[ActivitiesManager.current_day]["activities"]
+	if current_day_activities.size() >= 3:
+		print("[target_container] Cannot add more than 3 activities for Day %d." % ActivitiesManager.current_day)
+		return
 	if draggable_container == null:
 		print("[Error] Cannot add child; draggable_container is null.")
 		return
@@ -29,7 +34,7 @@ func _drop_data(position: Vector2, data: Variant) -> void:
 	if not typeof(data) == TYPE_DICTIONARY:
 		print("[Error] Received data is not a Dictionary:", data)
 		return
-	print("[Debug] _drop_data has run. Data received: ", data)
+	print("[target_container] _drop_data has run. Data received: ", data)
 
 	# Create a new draggable instance for the dropped item
 	var draggable_copy = draggable_scene.instantiate()

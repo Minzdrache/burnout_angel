@@ -1,5 +1,7 @@
 extends Node
-class_name Activities_manager
+# class_name activities_manager
+# this class is autoloaded as a singleton ActivitiesManager (different spelling for clear use)
+
 # Global list of activities and their stat impacts
 var activities = [
 	{"label": "Talk to doctor", "stat_change": {"mood": 5, "willpower": -3}},
