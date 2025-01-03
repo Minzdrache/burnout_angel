@@ -8,3 +8,7 @@ backgrounds:
 * celestial by screentones (downloaded from: https://www.deviantart.com/screentones/art/Clouds-Color-Stock-760600339) 
 * celestial2 by screentones (downloaded from: https://www.deviantart.com/screentones/art/Clouds2-833363174)
 * doctor office by binbinek (downloaded from: https://www.deviantart.com/binbinek/art/00-1112163006)
+
+characters: 
+* main character (Lory) = Aiko by Noraneko Games (downloaded from: https://noranekogames.itch.io/aikosprite/download/eyJleHBpcmVzIjoxNzM1OTQzNDA5LCJpZCI6ODcyMzQxfQ%3d%3d.CgfoGJ0haxpXTFSeKnZ4O17GYUY%3d, License: free to use for games with credit
+* 

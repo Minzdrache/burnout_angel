@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8i3yijwi6lyi"
-path="res://.godot/imported/celestial2.png-41296bf4e7cbce47b4a3ca2f1915cab5.ctex"
+uid="uid://de2h0v65hqgwb"
+path="res://.godot/imported/Aiko_Casual_Smile_Blush.png-e2ac24cb0ef461afbf27ab135e43b18c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bilder/celestial2.png"
-dest_files=["res://.godot/imported/celestial2.png-41296bf4e7cbce47b4a3ca2f1915cab5.ctex"]
+source_file="res://Bilder/character_pictures/Aiko_Casual_Smile_Blush.png"
+dest_files=["res://.godot/imported/Aiko_Casual_Smile_Blush.png-e2ac24cb0ef461afbf27ab135e43b18c.ctex"]
 
 [params]
 

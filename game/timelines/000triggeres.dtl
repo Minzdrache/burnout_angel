@@ -1,4 +1,5 @@
 [style name="style1"]
+[background arg="res://Bilder/celestial.jpg" fade="0.0"]
 # The first timeline. Gives trigger warnings, checks players mood.
 join angel center
 angel: Hello and welcome to "Burnout Angel".  This game is about a young woman struggling with burnout. You will learn about burnout symptoms and consequences. With the help of an angel you can try out self-care routines and find a way to take care of your needs.

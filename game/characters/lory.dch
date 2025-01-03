@@ -8,16 +8,61 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "firstportrait",
+"default_portrait": "happy",
 "description": "",
 "display_name": "Lory",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"firstportrait": {
+"embarassed": {
 "export_overrides": {
-"image": "\"res://Bilder/princess_blank.png\""
+"image": "\"res://Bilder/character_pictures/Aiko_Casual_Closed_Frown_Blush.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"frown_closed": {
+"export_overrides": {
+"image": "\"res://Bilder/character_pictures/Aiko_Casual_Closed_Frown.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"frown_open": {
+"export_overrides": {
+"image": "\"res://Bilder/character_pictures/Aiko_Casual_Frown.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"happy": {
+"export_overrides": {
+"image": "\"res://Bilder/character_pictures/Aiko_Casual_Closed_Open.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"interested": {
+"export_overrides": {
+"image": "\"res://Bilder/character_pictures/Aiko_Casual_Open.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"smile": {
+"export_overrides": {
+"image": "\"res://Bilder/character_pictures/Aiko_Casual_Smile.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

@@ -45,7 +45,7 @@ variables={
 "stress": 99,
 "willpower": 5
 }
-layout/style_list=["res://textbox_styles/style1.tres", "res://textbox_styles/picture.tres"]
+layout/style_list=["res://textbox_styles/style1.tres", "res://textbox_styles/picture.tres", "res://textbox_styles/visual_novel_permade.tres"]
 layout/default_style="res://style1.tres"
 
 [editor_plugins]
