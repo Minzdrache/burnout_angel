@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://btg14y20vjhsw"]
+[gd_scene load_steps=4 format=3 uid="uid://btg14y20vjhsw"]
 
+[ext_resource type="Script" path="res://scenes/add_activity_test.gd" id="3_clrxg"]
 [ext_resource type="Script" path="res://scripts/source_container.gd" id="5_1mj5i"]
 [ext_resource type="Script" path="res://scripts/target_container.gd" id="9_iro0o"]
 
@@ -84,12 +85,13 @@ offset_right = 90.0
 offset_bottom = 58.0
 text = "Afternoon"
 
-[node name="Button" type="Button" parent="."]
+[node name="add_activity_test" type="Button" parent="."]
 offset_left = 312.0
 offset_top = 472.0
 offset_right = 440.0
 offset_bottom = 503.0
 text = "Add Meditation"
+script = ExtResource("3_clrxg")
 
 [node name="Label5" type="Label" parent="."]
 offset_left = 124.0
@@ -98,3 +100,5 @@ offset_right = 661.0
 offset_bottom = 627.0
 text = "You can add 3 activities for today. 
 Once an activity is selected in the \"Plan for today\" you can't change it."
+
+[connection signal="pressed" from="add_activity_test" to="source_container" method="_on_add_activity_test_pressed"]

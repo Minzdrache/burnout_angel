@@ -30,7 +30,13 @@ func get_activities_per_day() -> Array:
 	
 # Add a new activity to the global list of activities
 func add_activity(label: String, stat_change: Dictionary) -> void:
+	# can only add new activities that are unique
+	for activity in activities:
+		if  label == activity["label"]: 
+			print("[Error] activity with label %l not unique" % label) # noch nie bekommen...:/
+			return
 	activities.append({"label": label, "stat_change": stat_change})
+	print("[ActivitiesManager] Activity '%s' added successfully." % label)
 
 # Add an activity to the corresponding day in activities_per_day
 func add_activity_to_day(label: String, stat_change: Dictionary, day: int) -> void:
