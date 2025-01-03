@@ -57,4 +57,5 @@ func _drop_data(position: Vector2, data: Variant) -> void:
 		
 		# Apply stat changes using the singleton StatsManager
 		StatsManager.apply_stat_changes(data["stat_change"])
-		print("[target_container] Stats updated: Mood = %d, Willpower = %d" % [StatsManager.stats["mood"], StatsManager.stats["willpower"]])
+		print("[target_container] Stats updated: Mood = %d, Willpower = %d, Stress = %d, Health = %d" % [StatsManager.stats["mood"], 
+			StatsManager.stats["willpower"], StatsManager.stats["stress"], StatsManager.stats["health"]])

@@ -5,10 +5,25 @@ extends Node
 # Global list of activities and their stat impacts
 var activities = [
 	{"label": "Talk to doctor", "stat_change": {"mood": 5, "willpower": -3}},
-	{"label": "Do a self-care routine", "stat_change": {"mood": 10, "willpower": -5}},
-	{"label": "Go for a walk", "stat_change": {"mood": 7, "willpower": -2}},
+	{"label": "Go for a walk", "stat_change": {"health": 3, "mood": 6, "willpower": -1, "stress": -8}},
 	{"label": "Read a book", "stat_change": {"mood": 3, "willpower": -1}},
-	{"label": "Work on a hobby", "stat_change": {"mood": 6, "willpower": -4}}
+	{"label": "Visit doctor", "stat_change": {"health": 5, "mood": 3, "willpower": -4, "stress": -6}},
+	{"label": "Practice mindfulness", "stat_change": {"health": 1, "mood": 4, "willpower": 3, "stress": -7}},
+	]
+
+# for testing:
+# available on second day
+var all_activities = [
+	{"label": "Talk to doctor", "stat_change": {"mood": 5, "willpower": -3}},
+	{"label": "Go for a walk", "stat_change": {"health": 3, "mood": 6, "willpower": -1, "stress": -8}},
+	{"label": "Read a book", "stat_change": {"mood": 3, "willpower": -1}},
+	{"label": "Visit doctor", "stat_change": {"health": 5, "mood": 3, "willpower": -4, "stress": -6}},
+	{"label": "Practice mindfulness", "stat_change": {"health": 1, "mood": 4, "willpower": 3, "stress": -7}},
+	{"label": "Write in a journal", "stat_change": {"health": 0, "mood": 5, "willpower": 2, "stress": -6}},
+	{"label": "Socialize with friends", "stat_change": {"health": 1, "mood": 10, "willpower": -2, "stress": -7}},
+	{"label": "Go grocery shopping", "stat_change": {"health": 2, "mood": -2, "willpower": -3, "stress": 5}},
+	{"label": "Do laundry", "stat_change": {"health": 1, "mood": -1, "willpower": -2, "stress": 3}},
+	{"label": "Clean home", "stat_change": {"health": 3, "mood": 4, "willpower": -3, "stress": -4}},
 ]
 var current_day: int = 1
 
@@ -55,7 +70,7 @@ func print_activities_for_day(day: int) -> void:
 	for day_entry in activities_per_day:
 		if day_entry["day"] == day:
 			print("[activities_manager] Activities for Day %d:" % day)
-
+			print(ActivitiesManager.activities_per_day[day])
 			# Print the stats
 			print("Stats: Mood = %d, Willpower = %d" % [StatsManager.stats.mood, StatsManager.stats.willpower])
 			return

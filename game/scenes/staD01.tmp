@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://b8b4wuvjxyoop"]
 
 [ext_resource type="Script" path="res://gui/health_bar.gd" id="2_ha60a"]
-[ext_resource type="Script" path="res://gui/stress_bar.gd" id="2_w4qsa"]
-[ext_resource type="Script" path="res://gui/mood_bar.gd" id="3_yj5ne"]
+[ext_resource type="Script" path="res://scenes/stress_bar.gd" id="2_u7fsk"]
+[ext_resource type="Script" path="res://scenes/mood_bar.gd" id="3_rj4et"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xiul7"]
 bg_color = Color(0.151252, 0.360462, 0.280638, 0.803922)
@@ -136,7 +136,7 @@ theme_override_styles/background = SubResource("StyleBoxFlat_cfntk")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vt54n")
 value = 20.0
 show_percentage = false
-script = ExtResource("2_w4qsa")
+script = ExtResource("2_u7fsk")
 
 [node name="mood_bar" type="ProgressBar" parent="."]
 anchors_preset = 1
@@ -152,4 +152,4 @@ theme_override_styles/background = SubResource("StyleBoxFlat_7qe3l")
 theme_override_styles/fill = SubResource("StyleBoxFlat_t5ecx")
 value = 20.0
 show_percentage = false
-script = ExtResource("3_yj5ne")
+script = ExtResource("3_rj4et")

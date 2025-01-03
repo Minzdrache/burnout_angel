@@ -10,7 +10,7 @@ func _ready() -> void:
 	add_to_group("DRAGGABLE")
 	$Label.text = label
 
-func _get_drag_data(at_position: Vector2):
+func _get_drag_data(_position: Vector2):
 	"""
 	This function provides data when this item is being dragged.
 	"""

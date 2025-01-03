@@ -22,3 +22,10 @@ progress:
     added main_menu https://www.youtube.com/watch?v=zHYkcJyE52g more good stuff on: https://cococode.net/godot
     added font for title
     made first visual progress bar
+* 03.01.2025:
+    progress bars are visible in calender scene
+    progress bars get updated (I think)
+    calendar choosing activities from source to target_container works, updates stats
+* 04.01.2025:
+    "start day" button in calender scene -> loads next scene
+    real character picture, changes mood in Dialogic

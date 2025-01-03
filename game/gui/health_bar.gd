@@ -1,6 +1,6 @@
 extends ProgressBar
 
-var progress = stats_manager.stats["health"]
+var progress = StatsManager.stats["health"]
 
 # sets the value to the value for health saved in the stats_manager
 func _ready():
