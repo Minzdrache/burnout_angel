@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bihwe704p6xmm"]
+[gd_scene load_steps=10 format=3 uid="uid://bihwe704p6xmm"]
 
 [ext_resource type="Script" path="res://scripts/scene0_main_menu.gd" id="1_d0mbw"]
 [ext_resource type="Texture2D" uid="uid://y8caswi4iq7q" path="res://Bilder/celestial.jpg" id="1_sntc7"]
 [ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="2_axqly"]
+[ext_resource type="PackedScene" uid="uid://xq7oam55djhf" path="res://global/pause_manager.tscn" id="4_8oqcm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_74sqa"]
 texture = ExtResource("1_sntc7")
@@ -133,6 +134,10 @@ theme_override_font_sizes/font_size = 60
 text = "Burnout Angel"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="pause_manager" parent="." instance=ExtResource("4_8oqcm")]
+visible = false
+position = Vector2(-2, -1)
 
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]

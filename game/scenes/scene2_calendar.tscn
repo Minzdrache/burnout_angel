@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://btg14y20vjhsw"]
+[gd_scene load_steps=6 format=3 uid="uid://btg14y20vjhsw"]
 
 [ext_resource type="Script" path="res://scenes/add_activity_test.gd" id="3_clrxg"]
 [ext_resource type="PackedScene" uid="uid://b8b4wuvjxyoop" path="res://scenes/stats_test_scene.tscn" id="4_yw7ol"]
 [ext_resource type="Script" path="res://scripts/source_container.gd" id="5_1mj5i"]
+[ext_resource type="PackedScene" uid="uid://xq7oam55djhf" path="res://global/pause_manager.tscn" id="5_fuu3h"]
 [ext_resource type="Script" path="res://scripts/target_container.gd" id="9_iro0o"]
 
 [node name="Node2D" type="Node2D"]
@@ -111,5 +112,8 @@ offset_top = 481.0
 offset_right = 1012.0
 offset_bottom = 556.0
 text = "start day"
+
+[node name="pause_manager" parent="." instance=ExtResource("5_fuu3h")]
+visible = false
 
 [connection signal="pressed" from="add_activity_test" to="source_container" method="_on_add_activity_test_pressed"]

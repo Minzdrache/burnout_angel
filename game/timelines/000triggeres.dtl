@@ -35,7 +35,7 @@ angel: Let's see how you like this game.
 Are you ready to start the game?
 - Absolutely!
 	Let's start the game!
-	[wait time="1.0"]
+	[wait time="0.2"]
 	leave angel
 	jump 001start/
 - No, I want to check out some help.

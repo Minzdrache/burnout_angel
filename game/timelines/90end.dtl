@@ -1,7 +1,9 @@
+[background arg="res://Bilder/celestial.jpg" fade="0.0"]
 join angel center
 angel: Thank you for playing. I hope you learned something and had fun. See ya!
+# display credits????
 label end
 angel: Do you want to play again?
 - Sure, let's go!
-	jump 00timeline/
+	jump 001start/
 - No.

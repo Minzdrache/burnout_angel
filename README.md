@@ -27,5 +27,8 @@ progress:
     progress bars get updated (I think)
     calendar choosing activities from source to target_container works, updates stats
 * 04.01.2025:
-    "start day" button in calender scene -> loads next scene
-    real character picture, changes mood in Dialogic
+    "start day" button in calender scene -> loads next scene (not yet implemented)
+    real character picture, changes mood in Dialogic for Lory
+    picture with facial expressions for angel (not yet implemented)
+    nice start menu, start game leads to first dialouge
+    pause game implemented with pause_manager (must be in every scene)
