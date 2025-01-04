@@ -1,4 +1,5 @@
 extends ProgressBar
+class_name willpower_bar
 
 var progress = StatsManager.stats["health"]
 

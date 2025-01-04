@@ -1,36 +1,43 @@
 extends Node
 # class_name activities_manager
 # this class is autoloaded as a singleton ActivitiesManager (different spelling for clear use)
-
-# Global list of activities and their stat impacts
-var activities = [
-	{"label": "Talk to doctor", "stat_change": {"mood": 5, "willpower": -3}},
-	{"label": "Go for a walk", "stat_change": {"health": 3, "mood": 6, "willpower": -1, "stress": -8}},
-	{"label": "Read a book", "stat_change": {"mood": 3, "willpower": -1}},
-	{"label": "Visit doctor", "stat_change": {"health": 5, "mood": 3, "willpower": -4, "stress": -6}},
-	{"label": "Practice mindfulness", "stat_change": {"health": 1, "mood": 4, "willpower": 3, "stress": -7}},
-	]
-
-# for testing:
-# available on second day
-var all_activities = [
-	{"label": "Talk to doctor", "stat_change": {"mood": 5, "willpower": -3}},
-	{"label": "Go for a walk", "stat_change": {"health": 3, "mood": 6, "willpower": -1, "stress": -8}},
-	{"label": "Read a book", "stat_change": {"mood": 3, "willpower": -1}},
-	{"label": "Visit doctor", "stat_change": {"health": 5, "mood": 3, "willpower": -4, "stress": -6}},
-	{"label": "Practice mindfulness", "stat_change": {"health": 1, "mood": 4, "willpower": 3, "stress": -7}},
-	{"label": "Write in a journal", "stat_change": {"health": 0, "mood": 5, "willpower": 2, "stress": -6}},
-	{"label": "Socialize with friends", "stat_change": {"health": 1, "mood": 10, "willpower": -2, "stress": -7}},
-	{"label": "Go grocery shopping", "stat_change": {"health": 2, "mood": -2, "willpower": -3, "stress": 5}},
-	{"label": "Do laundry", "stat_change": {"health": 1, "mood": -1, "willpower": -2, "stress": 3}},
-	{"label": "Clean home", "stat_change": {"health": 3, "mood": 4, "willpower": -3, "stress": -4}},
-]
 var current_day: int = 1
 
 # List of activities planned for each day
 var activities_per_day: Array = [
 	{"day": 0, "activities": [{"label": "Work"}, {"label": "Faint at work"}, {"label": "Talk to doctor"}]}
 ]
+# prepopulated for testing
+var todays_activities: Array = [ {"label": "Go for a walk"}, {"label": "Visit doctor"}, {"label": "Study"}]
+
+var num_todays_activity: int = 0 # gets updated when an activity is loaded
+# Global list of activities and their stat impacts
+var activities = [
+	{"label": "Go for a walk", "stat_change": {"health": +20, "mood": +20, "willpower": -20, "stress": -40}},
+	{"label": "Study", "stat_change": {"health": +0,"mood": -4, "willpower": -5,  "stress": +10}},
+	{"label": "Visit doctor", "stat_change": {"health": +5, "mood": +3, "willpower": -4, "stress": -6}},
+	{"label": "Practice mindfulness", "stat_change": {"health": +1, "mood": +4, "willpower": +3, "stress": -7}},
+	]
+
+# for testing:
+# use for sorting the activities into buckets....
+# help user put them in the correct buckets
+# each activity gets "correct_bucket" and "is_in_correct_bucket" for checks
+# reset bucket selection when somethin is wrong, or enable wrong activities to be moved again???
+var all_activities = [
+	{"label": "Go for a walk", "stat_change": {"health": +3, "mood": +6, "willpower": -1, "stress": -8}},
+	{"label": "Read a book", "stat_change": {"health": +1,"mood": +3, "willpower": +2, "stress": -8}},
+	{"label": "Visit doctor", "stat_change": {"health": +5, "mood": +3, "willpower": -4, "stress": -6}},
+	{"label": "Practice mindfulness", "stat_change": {"health": +1, "mood": +4, "willpower": +3, "stress": -7}},
+	{"label": "Write in a journal", "stat_change": {"health": +4, "mood": +5, "willpower": +2, "stress": -6}},
+	{"label": "Socialize with friends", "stat_change": {"health": +1, "mood": +10, "willpower": -2, "stress": -7}},
+	{"label": "Go grocery shopping", "stat_change": {"health": +2, "mood": -2, "willpower": -3, "stress": +5}},
+	{"label": "Do laundry", "stat_change": {"health": +1, "mood": -1, "willpower": -2, "stress": +3}},
+	{"label": "Clean home", "stat_change": {"health": +3, "mood": +4, "willpower": -3, "stress": -4}},
+]
+
+
+
 func _ready() -> void:
 	# Initialize activities_per_day with empty lists for a few days
 	for i in range(1, 8): # Example: 7 days
@@ -65,6 +72,9 @@ func add_activity_to_day(label: String, stat_change: Dictionary, day: int) -> vo
 	for day_entry in activities_per_day:
 		if day_entry["day"] == day:
 			day_entry["activities"].append({"label": label, "stat_change": stat_change})
+		 # If the day matches the current day, update todays_activities
+			if day == ActivitiesManager.current_day:
+				todays_activities = day_entry["activities"]
 			# Print the activities of the current day
 			print_activities_for_day(day)
 			return

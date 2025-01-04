@@ -1,3 +1,12 @@
-[gd_scene format=3 uid="uid://b6c4rxswgbbs8"]
+[gd_scene load_steps=2 format=3 uid="uid://b6c4rxswgbbs8"]
+
+[ext_resource type="Texture2D" uid="uid://b8ke4gn10pi0n" path="res://Bilder/outside.png" id="1_eukk4"]
 
 [node name="activity_walk" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -187.0
+offset_top = -273.0
+offset_right = 1733.0
+offset_bottom = 807.0
+texture = ExtResource("1_eukk4")

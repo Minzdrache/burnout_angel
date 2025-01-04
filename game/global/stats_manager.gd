@@ -8,7 +8,9 @@ var stats = {
 	"willpower": 50,
 	"stress": 60
 }
+var level = 0
 
+var experience = 0
 # Updates stats based on a stat_change dictionary
 func apply_stat_changes(stat_change: Dictionary) -> void:
 	for stat in stat_change.keys():

@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://btg14y20vjhsw"]
+[gd_scene load_steps=7 format=3 uid="uid://btg14y20vjhsw"]
 
-[ext_resource type="Script" path="res://scenes/scene_2_calendar.gd" id="1_y1wlq"]
-[ext_resource type="Script" path="res://scenes/add_activity_test.gd" id="3_clrxg"]
+[ext_resource type="Script" path="res://scripts/scene_2_calendar.gd" id="1_y1wlq"]
+[ext_resource type="Script" path="res://scripts/add_activity_test.gd" id="3_clrxg"]
 [ext_resource type="PackedScene" uid="uid://b8b4wuvjxyoop" path="res://scenes/stats_test_scene.tscn" id="4_yw7ol"]
 [ext_resource type="Script" path="res://scripts/source_container.gd" id="5_1mj5i"]
-[ext_resource type="Script" path="res://scenes/start_day.gd" id="5_34ruy"]
 [ext_resource type="PackedScene" uid="uid://xq7oam55djhf" path="res://global/pause_manager.tscn" id="5_fuu3h"]
 [ext_resource type="Script" path="res://scripts/target_container.gd" id="9_iro0o"]
 
@@ -88,12 +87,11 @@ Once an activity is selected in the \"Plan for today\" you can't change it."
 [node name="stats_test_scene" parent="." instance=ExtResource("4_yw7ol")]
 
 [node name="start_day" type="Button" parent="."]
-offset_left = 832.0
-offset_top = 481.0
-offset_right = 1012.0
-offset_bottom = 556.0
+offset_left = 809.0
+offset_top = 550.0
+offset_right = 989.0
+offset_bottom = 625.0
 text = "start day"
-script = ExtResource("5_34ruy")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 132.0
@@ -118,3 +116,4 @@ visible = false
 
 [connection signal="mouse_entered" from="source_container" to="source_container" method="_on_mouse_entered"]
 [connection signal="pressed" from="add_activity_test" to="source_container" method="_on_add_activity_test_pressed"]
+[connection signal="pressed" from="start_day" to="." method="_on_start_day_button_pressed"]
