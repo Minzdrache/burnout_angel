@@ -1,0 +1,56 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0.541176, 0.466667, 0.427451, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "frown_closed",
+"description": "",
+"display_name": "Doctor",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"doubt": {
+"export_overrides": {
+"image": "\"res://Bilder/doctor/Hana_WinterVest_Open.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"frown_closed": {
+"export_overrides": {
+"image": "\"res://Bilder/doctor/Hana_WinterVest_ClosedEyes_frown.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"frown_open": {
+"export_overrides": {
+"image": "\"res://Bilder/doctor/Hana_WinterVest_Frown.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"smile": {
+"export_overrides": {
+"image": "\"res://Bilder/doctor/Hana_WinterVest_Smile.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

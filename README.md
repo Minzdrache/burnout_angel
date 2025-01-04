@@ -28,7 +28,6 @@ progress:
     calendar choosing activities from source to target_container works, updates stats
 * 04.01.2025:
     real character picture, changes mood in Dialogic for Lory
-    picture with facial expressions for angel (not yet implemented)
     nice start menu, start game leads to first dialouge
     pause game implemented with pause_manager (must be in every scene)
     menu in game with current day, level and experience
@@ -36,3 +35,13 @@ progress:
     dragging a calendar activity shows its stat changes
     "start day" button in calender scene -> loads next scene 
     progress bars get updated every frame
+    doctor visit 1 as scene and timeline, scene has button "go home" that loads the next activity
+
+
+    additional character ideas: 
+        angel? change colors and add wings https://noranekogames.itch.io/chie-free-character-sprite
+        girlfriend Valerie: https://noranekogames.itch.io/natsumi 
+        little sister: https://noranekogames.itch.io/suminewstyle
+        friend: https://noranekogames.itch.io/sora-newstyle-free-to-use-sprite https://noranekogames.itch.io/kana 
+
+picture with facial expressions for angel (not yet implemented)

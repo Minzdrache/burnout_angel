@@ -1,12 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6c4rxswgbbs8"]
+[gd_scene load_steps=4 format=3 uid="uid://b6c4rxswgbbs8"]
 
 [ext_resource type="Texture2D" uid="uid://b8ke4gn10pi0n" path="res://Bilder/outside.png" id="1_eukk4"]
+[ext_resource type="Script" path="res://scripts/activity_walk.gd" id="1_hv4nj"]
+[ext_resource type="PackedScene" uid="uid://xq7oam55djhf" path="res://global/pause_manager.tscn" id="3_5yos1"]
 
 [node name="activity_walk" type="Node2D"]
+script = ExtResource("1_hv4nj")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -187.0
-offset_top = -273.0
-offset_right = 1733.0
-offset_bottom = 807.0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 1165.22
+offset_bottom = 658.0
 texture = ExtResource("1_eukk4")
+expand_mode = 3
+
+[node name="pause_manager" parent="." instance=ExtResource("3_5yos1")]
+visible = false

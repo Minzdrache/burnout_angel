@@ -1,0 +1,3 @@
+[background arg="res://Bilder/doctor_office.jpg" fade="0.0"]
+join doctor (smile) left
+join lory (smile) right

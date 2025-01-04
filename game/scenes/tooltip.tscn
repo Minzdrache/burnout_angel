@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cv2rmog7fyk1r"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+offset_right = 104.0
+offset_bottom = 76.0
+
+[node name="LabelActivity" type="Label" parent="."]
+layout_mode = 2
+text = "activity name"
+
+[node name="LabelStats" type="Label" parent="."]
+layout_mode = 2
+text = "Mood: +5, 
+Health:+2,..."

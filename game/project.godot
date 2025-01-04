@@ -25,15 +25,19 @@ StatsManager="*res://global/stats_manager.gd"
 
 directories/dch_directory={
 "angel": "res://characters/angel.dch",
+"doctor": "res://characters/doctor.dch",
 "lory": "res://characters/lory.dch"
 }
 directories/dtl_directory={
 "000triggers": "res://timelines/000triggeres.dtl",
 "001start": "res://timelines/001start.dtl",
 "002first_day": "res://timelines/002first_day.dtl",
+"011doctor": "res://timelines/011doctor.dtl",
+"012doctor": "res://timelines/012doctor.dtl",
 "101calendar": "res://timelines/101calendar.dtl",
 "102self_care": "res://timelines/102self_care.dtl",
 "110challenges": "res://timelines/110challenges.dtl",
+"111walk": "res://timelines/111walk.dtl",
 "90end": "res://timelines/90end.dtl",
 "test": "res://test.dtl"
 }

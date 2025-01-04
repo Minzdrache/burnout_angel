@@ -92,3 +92,30 @@ func print_activities_for_day(day: int) -> void:
 			print("Stats: Mood = %d, Willpower = %d" % [StatsManager.stats.mood, StatsManager.stats.willpower])
 			return
 	print("[Error] Day %d not found in activities_per_day." % day)
+
+# Function to load an activity scene based on the activity label.
+func load_activity(activity: Dictionary):
+	var activity_label = activity["label"]
+	print("load activity: ")
+		# Example: Load different scenes based on the activity label.
+	match activity_label:
+		"Go for a walk":
+			get_tree().change_scene_to_file("res://scenes/activity_walk.tscn")
+		"Visit doctor":
+			get_tree().change_scene_to_file("res://scenes/activity_doctor.tscn")
+		"Study":
+			get_tree().change_scene_to_file("res://scenes/activity_study.tscn")
+		"Yoga":
+			get_tree().change_scene_to_file("res://scenes/Yoga.tscn")
+		"Meet friends":
+			get_tree().change_scene_to_file("res://scenes/MeetFriends.tscn")
+		"Cook dinner":
+			get_tree().change_scene_to_file("res://scenes/CookDinner.tscn")
+		"Work on project":
+			get_tree().change_scene_to_file("res://scenes/WorkOnProject.tscn")
+		"Take a walk":
+			get_tree().change_scene_to_file("res://scenes/TakeAWalk.tscn")
+		"Read a book":
+			get_tree().change_scene_to_file("res://scenes/ReadABook.tscn")
+		_:
+			print("Unknown activity: " + activity_label)
