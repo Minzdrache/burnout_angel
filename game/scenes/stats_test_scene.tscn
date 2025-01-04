@@ -1,8 +1,20 @@
-[gd_scene load_steps=12 format=3 uid="uid://b8b4wuvjxyoop"]
+[gd_scene load_steps=15 format=3 uid="uid://b8b4wuvjxyoop"]
 
 [ext_resource type="Script" path="res://gui/health_bar.gd" id="2_ha60a"]
 [ext_resource type="Script" path="res://gui/stress_bar.gd" id="2_w4qsa"]
 [ext_resource type="Script" path="res://gui/mood_bar.gd" id="3_yj5ne"]
+
+[sub_resource type="Theme" id="Theme_qk5u2"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qtws3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6y11q"]
+bg_color = Color(0.198087, 0.372155, 0.397943, 0.556863)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.134375, 0.276881, 0.30438, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xiul7"]
 bg_color = Color(0.151252, 0.360462, 0.280638, 0.803922)
@@ -90,6 +102,39 @@ corner_radius_bottom_left = 10
 
 [node name="stats_test_scene" type="Node2D"]
 
+[node name="Container" type="Container" parent="."]
+offset_left = 25.0
+offset_top = 16.0
+offset_right = 1136.0
+offset_bottom = 65.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container"]
+layout_mode = 2
+
+[node name="day" type="Label" parent="Container/HBoxContainer"]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 2
+text = "day: "
+
+[node name="number" type="Label" parent="Container/HBoxContainer"]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 2
+text = "number"
+
+[node name="TextureRect" type="TextureRect" parent="Container/HBoxContainer"]
+modulate = Color(0.933333, 0.384314, 0.384314, 0.521569)
+layout_mode = 2
+theme = SubResource("Theme_qk5u2")
+texture = SubResource("CanvasTexture_qtws3")
+
+[node name="Panel" type="Panel" parent="Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_6y11q")
+
 [node name="health_bar" type="ProgressBar" parent="."]
 anchors_preset = 1
 anchor_left = 1.0
@@ -105,6 +150,19 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_8jn4n")
 value = 20.0
 show_percentage = false
 script = ExtResource("2_ha60a")
+
+[node name="Label" type="Label" parent="health_bar"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -73.0
+offset_top = -12.9995
+offset_right = -9.99995
+offset_bottom = 10.0005
+grow_horizontal = 0
+rotation = 1.5708
+text = "health"
 
 [node name="willpower_bar" type="ProgressBar" parent="."]
 anchors_preset = 1
@@ -122,6 +180,19 @@ value = 20.0
 show_percentage = false
 script = ExtResource("2_ha60a")
 
+[node name="Label" type="Label" parent="willpower_bar"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -87.9999
+offset_top = -24.9996
+offset_right = -11.9999
+offset_bottom = -1.99965
+grow_horizontal = 0
+rotation = 1.5708
+text = "willpower"
+
 [node name="stress_bar" type="ProgressBar" parent="."]
 anchors_preset = 1
 anchor_left = 1.0
@@ -137,6 +208,19 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_vt54n")
 value = 20.0
 show_percentage = false
 script = ExtResource("2_w4qsa")
+
+[node name="Label" type="Label" parent="stress_bar"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -74.9999
+offset_top = -13.9996
+offset_right = -11.9999
+offset_bottom = 9.0004
+grow_horizontal = 0
+rotation = 1.5708
+text = "stress"
 
 [node name="mood_bar" type="ProgressBar" parent="."]
 anchors_preset = 1
@@ -154,10 +238,24 @@ value = 20.0
 show_percentage = false
 script = ExtResource("3_yj5ne")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_right = 1152.0
-offset_bottom = 40.0
+[node name="Label" type="Label" parent="mood_bar"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -70.0
+offset_top = -9.99961
+offset_right = -11.0
+offset_bottom = 13.0004
+grow_horizontal = 0
+rotation = 1.5708
+text = "mood"
 
-[node name="menu_bar" type="Label" parent="HBoxContainer"]
-layout_mode = 2
-text = "day: "
+[connection signal="mouse_entered" from="health_bar" to="health_bar" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="health_bar" to="health_bar" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="willpower_bar" to="willpower_bar" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="willpower_bar" to="willpower_bar" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="stress_bar" to="stress_bar" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="stress_bar" to="stress_bar" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="mood_bar" to="mood_bar" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="mood_bar" to="mood_bar" method="_on_mouse_exited"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://rl8otbj3hiaq"]
+
+[ext_resource type="Script" path="res://activity_doctor.gd" id="1_h2kmo"]
+
+[node name="activity_doctor" type="Node2D"]
+script = ExtResource("1_h2kmo")

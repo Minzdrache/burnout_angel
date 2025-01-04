@@ -32,3 +32,6 @@ progress:
     picture with facial expressions for angel (not yet implemented)
     nice start menu, start game leads to first dialouge
     pause game implemented with pause_manager (must be in every scene)
+    menu in game with current day.... (work in progress)
+    hovering over progress bars shows their name
+    dragging a calendar activity shows its stat changes

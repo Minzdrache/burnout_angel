@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://b6c4rxswgbbs8"]
+
+[node name="activity_walk" type="Node2D"]

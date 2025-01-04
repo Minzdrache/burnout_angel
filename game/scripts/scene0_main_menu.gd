@@ -25,11 +25,6 @@ func DialogicSignal(argument:String):
 		print("Signal Received")
 
 
-
-
-
-
-
 func _on_options_pressed() -> void:
 	print("Options pressed")
 

@@ -47,3 +47,8 @@ func _on_item_dropped_on_target(dropped_item: Node) -> void:
 
 func _on_add_activity_test_pressed() -> void:
 	pass # Replace with function body.
+
+
+func _on_mouse_entered() -> void:
+	# display the stat_changes for each draggable
+	pass # Replace with function body.

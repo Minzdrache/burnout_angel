@@ -39,6 +39,13 @@ func _ready() -> void:
 # Get all available activities
 func get_activities() -> Array:
 	return activities
+	
+# Helper method to find an activity by label
+func get_activity_by_label(label: String) -> Dictionary:
+	for activity in activities:
+		if activity["label"] == label:
+			return activity
+	return {}  # Return an empty dictionary if not found
 
 func get_activities_per_day() -> Array:
 	return activities_per_day
