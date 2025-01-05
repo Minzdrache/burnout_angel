@@ -1,5 +1,4 @@
 extends Node2D
-@onready var info_label = $stat_changes_info/Label
 @onready var start_day_button = $start_day
 
 var activity_info = {

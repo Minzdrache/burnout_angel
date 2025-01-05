@@ -7,8 +7,10 @@ func _ready() -> void:
 	$HBoxContainer/number_level.text = str(StatsManager.level)
 	$HBoxContainer/number_experience.text = str(StatsManager.experience)
 
+
+## maybe needs to be in the bars itself not here
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	_update_progress_bars()
 
 # Updates the progress bars based on the StatsManager values

@@ -64,7 +64,7 @@ theme_override_colors/font_color = Color(1, 1, 0.0941176, 1)
 theme_override_colors/font_shadow_color = Color(0.341176, 0.537255, 0.537255, 1)
 theme_override_fonts/font = ExtResource("2_u3s3f")
 theme_override_font_sizes/font_size = 30
-text = "resume with p
+text = "resume with \"Enter\"
 
 "
 horizontal_alignment = 1

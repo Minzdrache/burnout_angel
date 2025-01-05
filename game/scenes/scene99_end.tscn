@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://con00fpqo2b55"]
+
+[ext_resource type="Script" path="res://scenes/scene_99_end.gd" id="1_uh5yx"]
+[ext_resource type="Texture2D" uid="uid://y8caswi4iq7q" path="res://Bilder/celestial.jpg" id="2_rroug"]
+[ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="3_dr0qr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8gcjo"]
+texture = ExtResource("2_rroug")
+modulate_color = Color(0.505344, 0.505344, 0.505344, 1)
+
+[node name="end" type="Node2D"]
+script = ExtResource("1_uh5yx")
+
+[node name="background" type="Panel" parent="."]
+custom_minimum_size = Vector2(400, 400)
+offset_left = -4.0
+offset_top = -1.0
+offset_right = 1148.0
+offset_bottom = 647.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_8gcjo")
+
+[node name="title" type="Label" parent="."]
+offset_left = 285.0
+offset_top = 51.0
+offset_right = 832.0
+offset_bottom = 112.0
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0.341176, 0.537255, 0.537255, 1)
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("3_dr0qr")
+theme_override_font_sizes/font_size = 60
+text = "Burnout Angel"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="help2" type="Label" parent="."]
+offset_left = 141.0
+offset_top = 142.0
+offset_right = 1042.0
+offset_bottom = 461.0
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_dr0qr")
+theme_override_font_sizes/font_size = 30
+text = "
+
+Thank you for playing Burnout Angel!
+
+I hope you had fun and learned something about 
+
+burnout. "
+horizontal_alignment = 1
+
+[node name="menu" type="Button" parent="."]
+offset_left = 995.0
+offset_top = 575.0
+offset_right = 1126.0
+offset_bottom = 626.0
+text = "Menu
+"
+
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

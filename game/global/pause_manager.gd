@@ -7,7 +7,7 @@ var paused: bool = false
 func _ready() -> void:
 	resume_game()
 	
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("pause"):
 		if !get_tree().paused:
 			pause_game()

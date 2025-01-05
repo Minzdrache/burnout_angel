@@ -5,7 +5,7 @@ var current_day: int = 1
 
 # List of activities planned for each day
 var activities_per_day: Array = [
-	{"day": 0, "activities": [{"label": "Work"}, {"label": "Faint at work"}, {"label": "Talk to doctor"}]}
+	{"day": 0, "activities": [{"label": "Work"}, {"label": "Faint at work"}, {"label": "Talk to doctor"}], "journal": "Today I fainted at work and was sent to a doctor."}
 ]
 # prepopulated for testing
 var todays_activities: Array = [ {"label": "Go for a walk"}, {"label": "Visit doctor"}, {"label": "Study"}]
@@ -72,6 +72,7 @@ func add_activity_to_day(label: String, stat_change: Dictionary, day: int) -> vo
 	for day_entry in activities_per_day:
 		if day_entry["day"] == day:
 			day_entry["activities"].append({"label": label, "stat_change": stat_change})
+			day_entry["journal"] = "placeholder"
 		 # If the day matches the current day, update todays_activities
 			if day == ActivitiesManager.current_day:
 				todays_activities = day_entry["activities"]
