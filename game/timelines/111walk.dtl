@@ -1,3 +1,27 @@
 [background arg="res://Bilder/outside.png" fade="0.0"]
-join lory (smile) center
-<Empty Text Event>
+[sound volume="0.0"]
+join lory (frown_open) center
+Lory got out of the house and starts walking down the street.
+lory: So, makde the first stel. I'm on the street. It feels strange… to just be here, walking. No deadlines. No emails to check. No one to impress. Just… me. Feels a little unproductive. Where should I go?
+- Just down the road.
+- To a park nearby.
+	lory: Mhm... that's far. I don't want to go. Maybe next time.
+Lory walks on. A bird chirps nearby and Lory stops to look at it.
+- ignore bird
+- look at bird
+	lory (interested): Mhm. I can't see it. It's hiding behind the leaves. Much as I would like to do now. Why do I have to be out here anyway?
+- listen to bird
+	lory (interested): That bird… It’s so loud. Is it scolding me? Or cheering me on? Either way, it’s more attention than I’m used to getting.
+Lory looks up to see the blooming trees.
+lory (smile): Oh the cherry trees are blooming! They let their peddles flow, like they don't care what anyone thinks.\
+Maybe I could learn a thing or two from trees.
+A car drives by, and Lory steps aside.
+update lory rightmost [move_time="0.1"]
+lory (frown_closed): Ugh. Even out here, I’m dodging things. Always making room for others… Do I ever make space for myself?
+A breeze rustles through the leaves.
+join lory right
+lory (happy): That breeze feels nice. Like a little nudge from the universe. 'Keep going,' it says.
+lory (frown_open): I will. But… I need to figure out where I’m going first.
+She looks down at her shoes, one foot in front of the other.
+lory (interested): Step by step, Lory. That’s how you’ve always done it. Don’t think too far ahead. Just… keep walking.\
+It’s nice seeing the world just… existing. No pressure. No rush. I wonder if I could ever live like that.

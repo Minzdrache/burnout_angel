@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://con00fpqo2b55"]
 
-[ext_resource type="Script" path="res://scenes/scene_99_end.gd" id="1_uh5yx"]
+[ext_resource type="Script" path="res://scene_99_end.gd" id="1_uh5yx"]
 [ext_resource type="Texture2D" uid="uid://y8caswi4iq7q" path="res://Bilder/celestial.jpg" id="2_rroug"]
 [ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="3_dr0qr"]
 
@@ -60,6 +60,14 @@ offset_top = 575.0
 offset_right = 1126.0
 offset_bottom = 626.0
 text = "Menu
+"
+
+[node name="get_stats" type="Button" parent="."]
+offset_left = 47.0
+offset_top = 569.0
+offset_right = 178.0
+offset_bottom = 620.0
+text = "Show me the stats!
 "
 
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

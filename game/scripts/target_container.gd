@@ -14,13 +14,13 @@ func _ready() -> void:
 		return
 	print("[target_container] draggable_container initialized successfully: ", draggable_container)
 
-func _can_drop_data(position: Vector2, data) -> bool:
+func _can_drop_data(_position: Vector2, data) -> bool:
 	# Validate the data
 	var can_drop: bool = data is Dictionary and "label" in data
 	print("[target_container] _can_drop_data has run, returning: %s" % can_drop)
 	return can_drop
 	
-func _drop_data(position: Vector2, data: Variant) -> void:
+func _drop_data(_position: Vector2, data: Variant) -> void:
 	# Check if the current day already has 3 activities
 	var current_day_activities = ActivitiesManager.get_activities_per_day()[ActivitiesManager.current_day]["activities"]
 	if current_day_activities.size() >= 3:

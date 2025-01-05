@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhrjuan7fjhoa"]
+[gd_scene load_steps=3 format=3 uid="uid://dhrjuan7fjhoa"]
 
+[ext_resource type="Script" path="res://scripts/bedroom.gd" id="1_10rja"]
 [ext_resource type="Texture2D" uid="uid://dilrbnjumim2e" path="res://Bilder/single bedroom.jpg" id="1_xnp6o"]
 
 [node name="bedroom" type="Node2D"]
+script = ExtResource("1_10rja")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -5.0
@@ -12,12 +14,11 @@ offset_bottom = 647.0
 texture = ExtResource("1_xnp6o")
 expand_mode = 3
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect"]
-visible = false
-modulate = Color(0.458405, 0.458405, 0.458405, 1)
-offset_left = 2.0
-offset_top = -1.0
-offset_right = 1163.0
-offset_bottom = 652.0
-texture = ExtResource("1_xnp6o")
-expand_mode = 3
+[node name="next_activity" type="Button" parent="TextureRect"]
+offset_left = 1009.0
+offset_top = 586.0
+offset_right = 1143.0
+offset_bottom = 636.0
+text = "next activity"
+
+[connection signal="pressed" from="TextureRect/next_activity" to="." method="_on_next_activity_pressed"]

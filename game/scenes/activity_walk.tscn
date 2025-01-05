@@ -15,5 +15,14 @@ offset_bottom = 658.0
 texture = ExtResource("1_eukk4")
 expand_mode = 3
 
+[node name="go home" type="Button" parent="."]
+offset_left = 809.0
+offset_top = 550.0
+offset_right = 989.0
+offset_bottom = 625.0
+text = "go home"
+
 [node name="pause_manager" parent="." instance=ExtResource("3_5yos1")]
 visible = false
+
+[connection signal="pressed" from="go home" to="." method="_on_go_home_pressed"]

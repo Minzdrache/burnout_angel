@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://ccwowwp3fm5n1"]
 
-[ext_resource type="Script" path="res://scenes/activity_journal.gd" id="1_1eqp7"]
-[ext_resource type="PackedScene" uid="uid://dhrjuan7fjhoa" path="res://scenes/bedroom.tscn" id="1_5gxgg"]
+[ext_resource type="Script" path="res://scripts/activity_journal.gd" id="1_1eqp7"]
+[ext_resource type="Texture2D" uid="uid://dilrbnjumim2e" path="res://Bilder/single bedroom.jpg" id="2_1t4ad"]
 [ext_resource type="PackedScene" uid="uid://b8b4wuvjxyoop" path="res://scenes/stats_test_scene.tscn" id="2_2b5bh"]
 [ext_resource type="PackedScene" uid="uid://xq7oam55djhf" path="res://global/pause_manager.tscn" id="3_5gmd1"]
-[ext_resource type="Script" path="res://scenes/journal.gd" id="4_w8p4q"]
+[ext_resource type="Script" path="res://scripts/journal.gd" id="4_w8p4q"]
 [ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="5_qwg5q"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7wje7"]
@@ -40,7 +40,13 @@ shadow_size = 5
 [node name="activity_journal" type="Node2D"]
 script = ExtResource("1_1eqp7")
 
-[node name="bedroom" parent="." instance=ExtResource("1_5gxgg")]
+[node name="background" type="TextureRect" parent="."]
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 1156.0
+offset_bottom = 647.0
+texture = ExtResource("2_1t4ad")
+expand_mode = 3
 
 [node name="stats_test_scene" parent="." instance=ExtResource("2_2b5bh")]
 
@@ -94,7 +100,18 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/background_color = Color(0.901961, 0.835294, 0.858824, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-placeholder_text = "placeholder Text
+placeholder_text = "Day: 0
+Activities:
+  - Work
+  - Faint at work
+  - Talk to doctor
+Journal Entries:
+  - Today I fainted at work and was sent to a doctor.
+
+Day: 1
+Activities:
+Journal Entries:
+  (No journal entries for this day.)
 "
 
 [node name="padding" type="ColorRect" parent="outside/journal"]
@@ -118,7 +135,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/background_color = Color(0.901961, 0.835294, 0.858824, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = ".."
+text = "Today I am grateful for"
 placeholder_text = "placeholder Text
 "
 
@@ -145,7 +162,7 @@ offset_left = 1009.0
 offset_top = 586.0
 offset_right = 1143.0
 offset_bottom = 636.0
-text = "next_activity"
+text = "next activity"
 
 [node name="pause_manager" parent="." instance=ExtResource("3_5gmd1")]
 visible = false

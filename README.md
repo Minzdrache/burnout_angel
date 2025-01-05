@@ -36,7 +36,9 @@ progress:
     "start day" button in calender scene -> loads next scene 
     progress bars get updated every frame
     doctor visit 1 as scene and timeline, scene has button "go home" that loads the next activity
-
+* 05.01.2025: 
+    status bars update themselves
+    journal minigame (in progress), fixed: progress bars update as result of finishing journal minigame
 
     additional character ideas: 
         angel? change colors and add wings https://noranekogames.itch.io/chie-free-character-sprite

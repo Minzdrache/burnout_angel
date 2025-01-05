@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba44dsuqt0hm7"]
+
+[ext_resource type="Texture2D" uid="uid://dilrbnjumim2e" path="res://Bilder/single bedroom.jpg" id="1_2q8db"]
+[ext_resource type="Script" path="res://scripts/activity_self_care.gd" id="1_5s3l6"]
+
+[node name="activity_self_care" type="Node2D"]
+script = ExtResource("1_5s3l6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 1156.0
+offset_bottom = 647.0
+texture = ExtResource("1_2q8db")
+expand_mode = 3
+
+[node name="next_activity" type="Button" parent="TextureRect"]
+offset_left = 1009.0
+offset_top = 586.0
+offset_right = 1143.0
+offset_bottom = 636.0
+text = "next activity"

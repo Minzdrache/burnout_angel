@@ -5,7 +5,7 @@ var current_day: int = 1
 
 # List of activities planned for each day
 var activities_per_day: Array = [
-	{"day": 0, "activities": [{"label": "Work"}, {"label": "Faint at work"}, {"label": "Talk to doctor"}], "journal": "Today I fainted at work and was sent to a doctor."}
+	{"day": 0, "activities": [{"label": "Work"}, {"label": "Faint at work"}, {"label": "Talk to doctor"}], "journal": ["Today I fainted at work and was sent to a doctor."]}
 ]
 # prepopulated for testing
 var todays_activities: Array = [ {"label": "Go for a walk"}, {"label": "Visit doctor"}, {"label": "Study"}]
@@ -16,7 +16,8 @@ var activities = [
 	{"label": "Go for a walk", "stat_change": {"health": +20, "mood": +20, "willpower": -20, "stress": -40}},
 	{"label": "Study", "stat_change": {"health": +0,"mood": -4, "willpower": -5,  "stress": +10}},
 	{"label": "Visit doctor", "stat_change": {"health": +5, "mood": +3, "willpower": -4, "stress": -6}},
-	{"label": "Practice mindfulness", "stat_change": {"health": +1, "mood": +4, "willpower": +3, "stress": -7}},
+	{"label": "Practice mindfulness", "stat_change": {"health": +1, "mood": +4, "willpower": -2, "stress": -7}},
+	{"label": "Write journal", "stat_change": {"health": +1, "mood": +4, "willpower": +3, "stress": -7}},
 	]
 
 # for testing:
@@ -39,8 +40,9 @@ var all_activities = [
 
 
 func _ready() -> void:
+	pass
 	# Initialize activities_per_day with empty lists for a few days
-	for i in range(1, 8): # Example: 7 days
+	for i in range(1, 2): # Example: 7 days
 		activities_per_day.append({"day": i, "activities": []})
 
 # Get all available activities
@@ -106,8 +108,8 @@ func load_activity(activity: Dictionary):
 			get_tree().change_scene_to_file("res://scenes/activity_doctor.tscn")
 		"Study":
 			get_tree().change_scene_to_file("res://scenes/activity_study.tscn")
-		"Yoga":
-			get_tree().change_scene_to_file("res://scenes/Yoga.tscn")
+		"Write journal":
+			get_tree().change_scene_to_file("res://scenes/activity_journal.tscn")
 		"Meet friends":
 			get_tree().change_scene_to_file("res://scenes/MeetFriends.tscn")
 		"Cook dinner":
@@ -120,3 +122,5 @@ func load_activity(activity: Dictionary):
 			get_tree().change_scene_to_file("res://scenes/ReadABook.tscn")
 		_:
 			print("Unknown activity: " + activity_label)
+func load_next_activity():
+	

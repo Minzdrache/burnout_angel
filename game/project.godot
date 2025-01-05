@@ -43,11 +43,7 @@ directories/dtl_directory={
 }
 variables={
 "activity": "",
-"gratitudeJournal": "This is a gratitude journal that can't save users input...",
-"mood": 20,
-"selfcareCount": 0,
-"stress": 99,
-"willpower": 5
+"selfcareCount": 0
 }
 layout/style_list=["res://textbox_styles/style1.tres", "res://textbox_styles/picture.tres", "res://textbox_styles/visual_novel_permade.tres"]
 layout/default_style="res://style1.tres"
