@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://rl8otbj3hiaq"]
+[gd_scene load_steps=5 format=3 uid="uid://rl8otbj3hiaq"]
 
 [ext_resource type="Script" path="res://activity_doctor.gd" id="1_h2kmo"]
 [ext_resource type="PackedScene" uid="uid://xq7oam55djhf" path="res://global/pause_manager.tscn" id="2_38kwh"]
+[ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="3_jlhyq"]
 [ext_resource type="Texture2D" uid="uid://bib46btp564rk" path="res://Bilder/doctor_office.jpg" id="3_lnvsl"]
 
 [node name="activity_doctor" type="Node2D"]
@@ -20,6 +21,7 @@ offset_left = 386.0
 offset_top = 455.0
 offset_right = 502.0
 offset_bottom = 507.0
+theme_override_fonts/font = ExtResource("3_jlhyq")
 text = "go home"
 
 [node name="pause_manager" parent="." instance=ExtResource("2_38kwh")]

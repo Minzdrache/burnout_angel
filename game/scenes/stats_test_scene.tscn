@@ -1,9 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://b8b4wuvjxyoop"]
+[gd_scene load_steps=19 format=3 uid="uid://b8b4wuvjxyoop"]
 
 [ext_resource type="Script" path="res://scripts/stats_test_scene.gd" id="1_qai11"]
 [ext_resource type="Script" path="res://gui/health_bar.gd" id="2_ha60a"]
 [ext_resource type="Script" path="res://gui/stress_bar.gd" id="2_w4qsa"]
+[ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="2_x34gh"]
 [ext_resource type="Script" path="res://gui/mood_bar.gd" id="3_yj5ne"]
+[ext_resource type="Script" path="res://scenes/willpower_bar.gd" id="4_uh3i4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6y11q"]
 bg_color = Color(0.28485, 0.28485, 0.28485, 0.533333)
@@ -134,12 +136,14 @@ texture = SubResource("CanvasTexture_qtws3")
 light_mask = 2
 visibility_layer = 2
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x34gh")
 text = "day: "
 
 [node name="number_day" type="Label" parent="HBoxContainer"]
 light_mask = 2
 visibility_layer = 2
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x34gh")
 text = "1"
 script = SubResource("GDScript_b6hwv")
 
@@ -154,12 +158,14 @@ texture = SubResource("CanvasTexture_qtws3")
 light_mask = 2
 visibility_layer = 2
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x34gh")
 text = "level: "
 
 [node name="number_level" type="Label" parent="HBoxContainer"]
 light_mask = 2
 visibility_layer = 2
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x34gh")
 text = "1"
 
 [node name="TextureRect4" type="TextureRect" parent="HBoxContainer"]
@@ -173,12 +179,14 @@ texture = SubResource("CanvasTexture_qtws3")
 light_mask = 2
 visibility_layer = 2
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x34gh")
 text = "experience: "
 
 [node name="number_experience" type="Label" parent="HBoxContainer"]
 light_mask = 2
 visibility_layer = 2
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x34gh")
 text = "0"
 
 [node name="TextureRect6" type="TextureRect" parent="HBoxContainer"]
@@ -216,6 +224,7 @@ offset_right = -9.99995
 offset_bottom = 10.0005
 grow_horizontal = 0
 rotation = 1.5708
+theme_override_fonts/font = ExtResource("2_x34gh")
 text = "health"
 
 [node name="willpower_bar" type="ProgressBar" parent="."]
@@ -232,7 +241,7 @@ theme_override_styles/background = SubResource("StyleBoxFlat_2gnsa")
 theme_override_styles/fill = SubResource("StyleBoxFlat_4aosh")
 value = 20.0
 show_percentage = false
-script = ExtResource("2_ha60a")
+script = ExtResource("4_uh3i4")
 
 [node name="Label" type="Label" parent="willpower_bar"]
 layout_mode = 1
@@ -245,6 +254,7 @@ offset_right = -11.9999
 offset_bottom = -1.99965
 grow_horizontal = 0
 rotation = 1.5708
+theme_override_fonts/font = ExtResource("2_x34gh")
 text = "willpower"
 
 [node name="stress_bar" type="ProgressBar" parent="."]
@@ -274,6 +284,7 @@ offset_right = -11.9999
 offset_bottom = 9.0004
 grow_horizontal = 0
 rotation = 1.5708
+theme_override_fonts/font = ExtResource("2_x34gh")
 text = "stress"
 
 [node name="mood_bar" type="ProgressBar" parent="."]
@@ -303,6 +314,7 @@ offset_right = -11.0
 offset_bottom = 13.0004
 grow_horizontal = 0
 rotation = 1.5708
+theme_override_fonts/font = ExtResource("2_x34gh")
 text = "mood"
 
 [connection signal="mouse_entered" from="health_bar" to="health_bar" method="_on_mouse_entered"]

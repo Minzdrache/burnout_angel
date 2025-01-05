@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://btg14y20vjhsw"]
+[gd_scene load_steps=9 format=3 uid="uid://btg14y20vjhsw"]
 
 [ext_resource type="Script" path="res://scripts/scene_2_calendar.gd" id="1_y1wlq"]
 [ext_resource type="Texture2D" uid="uid://y8caswi4iq7q" path="res://Bilder/celestial.jpg" id="2_08lso"]
 [ext_resource type="Script" path="res://scripts/add_activity_test.gd" id="3_clrxg"]
+[ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="3_nw172"]
 [ext_resource type="PackedScene" uid="uid://b8b4wuvjxyoop" path="res://scenes/stats_test_scene.tscn" id="4_yw7ol"]
 [ext_resource type="Script" path="res://scripts/source_container.gd" id="5_1mj5i"]
 [ext_resource type="PackedScene" uid="uid://xq7oam55djhf" path="res://global/pause_manager.tscn" id="5_fuu3h"]
@@ -26,6 +27,7 @@ offset_left = 746.0
 offset_top = 86.0
 offset_right = 881.0
 offset_bottom = 122.0
+theme_override_fonts/font = ExtResource("3_nw172")
 text = "Activities"
 
 [node name="source_container" type="Container" parent="."]
@@ -75,6 +77,7 @@ offset_left = 218.0
 offset_top = 87.0
 offset_right = 442.0
 offset_bottom = 159.0
+theme_override_fonts/font = ExtResource("3_nw172")
 text = "Plan for today
 "
 
@@ -92,6 +95,7 @@ offset_left = 124.0
 offset_top = 526.0
 offset_right = 661.0
 offset_bottom = 627.0
+theme_override_fonts/font = ExtResource("3_nw172")
 text = "You can add 3 activities for today. 
 Once an activity is selected in the \"Plan for today\" you can't change it."
 
@@ -102,24 +106,28 @@ offset_left = 809.0
 offset_top = 550.0
 offset_right = 989.0
 offset_bottom = 625.0
+theme_override_fonts/font = ExtResource("3_nw172")
 text = "start day"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 132.0
-offset_top = 114.0
-offset_right = 212.0
-offset_bottom = 214.0
+offset_left = 121.0
+offset_top = 117.0
+offset_right = 218.0
+offset_bottom = 217.0
 
 [node name="morning" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_nw172")
 text = "Morning"
 
 [node name="midday" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_nw172")
 text = "Midday"
 
 [node name="afternoon" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_nw172")
 text = "Afternoon"
 
 [node name="pause_manager" parent="." instance=ExtResource("5_fuu3h")]

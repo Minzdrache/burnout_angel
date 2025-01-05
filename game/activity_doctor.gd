@@ -21,7 +21,4 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	print("go_home_button is pressed")
-	ActivitiesManager.num_todays_activity += 1
-	# load activities
-	ActivitiesManager.load_activity(ActivitiesManager.todays_activities[ActivitiesManager.num_todays_activity])
-	print("activity: " + str(ActivitiesManager.todays_activities[ActivitiesManager.num_todays_activity]))
+	get_tree().change_scene_to_file("res://scenes/bedroom.tscn")

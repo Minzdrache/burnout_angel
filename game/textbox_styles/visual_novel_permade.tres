@@ -13,7 +13,9 @@
 
 [sub_resource type="Resource" id="Resource_tldng"]
 script = ExtResource("1_bigyv")
-overrides = {}
+overrides = {
+"global_font": "\"res://fonts/Berry Rotunda.ttf\""
+}
 
 [sub_resource type="Resource" id="Resource_d6otb"]
 script = ExtResource("1_bigyv")

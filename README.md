@@ -39,6 +39,13 @@ progress:
 * 05.01.2025: 
     status bars update themselves
     journal minigame (in progress), fixed: progress bars update as result of finishing journal minigame
+    connect scenes to get fully playable game, minor fix: connected main_menu with bedroom and bedroom with timelines
+    made font equal everywhere (except the source and target container of calendar, except the dialouge (maybe find a better font for dialouges)...)
+
+todo:
+    fix font in source and target container of calendar
+    picture with facial expressions for angel (not yet implemented)
+    get sounds to all dialouge scenes
 
     additional character ideas: 
         angel? change colors and add wings https://noranekogames.itch.io/chie-free-character-sprite
@@ -46,4 +53,3 @@ progress:
         little sister: https://noranekogames.itch.io/suminewstyle
         friend: https://noranekogames.itch.io/sora-newstyle-free-to-use-sprite https://noranekogames.itch.io/kana 
 
-picture with facial expressions for angel (not yet implemented)

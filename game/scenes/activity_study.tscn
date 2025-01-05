@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://0pisnlo17id2"]
+[gd_scene load_steps=5 format=3 uid="uid://0pisnlo17id2"]
 
 [ext_resource type="Script" path="res://scripts/activity_study.gd" id="1_4e4k8"]
 [ext_resource type="Texture2D" uid="uid://dilrbnjumim2e" path="res://Bilder/single bedroom.jpg" id="1_7fbdt"]
 [ext_resource type="PackedScene" uid="uid://xq7oam55djhf" path="res://global/pause_manager.tscn" id="2_p0gnp"]
+[ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="3_vfmm1"]
 
 [node name="activity_study" type="Node2D"]
 script = ExtResource("1_4e4k8")
@@ -24,6 +25,7 @@ offset_left = 922.0
 offset_top = 532.0
 offset_right = 1096.0
 offset_bottom = 586.0
+theme_override_fonts/font = ExtResource("3_vfmm1")
 text = "next activity"
 
 [node name="ColorRect" type="ColorRect" parent="."]

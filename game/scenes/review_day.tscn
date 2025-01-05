@@ -86,6 +86,7 @@ offset_left = 995.0
 offset_top = 575.0
 offset_right = 1126.0
 offset_bottom = 626.0
+theme_override_fonts/font = ExtResource("2_kauwf")
 text = "next"
 
 [connection signal="pressed" from="next" to="." method="_on_next_pressed"]

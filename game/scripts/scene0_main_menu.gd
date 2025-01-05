@@ -13,9 +13,8 @@ func _process(delta: float) -> void:
 
 func _on_start_pressed() -> void:
 	print("Start pressed")
-	Dialogic.start("000triggers")
-
-
+	get_tree().change_scene_to_file("res://scenes/bedroom.tscn")
+	
 func ended ():
 	Dialogic.timeline_ended.disconnect(ended)
 	print("ended")

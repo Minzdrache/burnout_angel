@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhrjuan7fjhoa"]
+[gd_scene load_steps=4 format=3 uid="uid://dhrjuan7fjhoa"]
 
 [ext_resource type="Script" path="res://scripts/bedroom.gd" id="1_10rja"]
 [ext_resource type="Texture2D" uid="uid://dilrbnjumim2e" path="res://Bilder/single bedroom.jpg" id="1_xnp6o"]
+[ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="3_mrasr"]
 
 [node name="bedroom" type="Node2D"]
 script = ExtResource("1_10rja")
@@ -20,6 +21,7 @@ offset_left = 1009.0
 offset_top = 586.0
 offset_right = 1143.0
 offset_bottom = 636.0
+theme_override_fonts/font = ExtResource("3_mrasr")
 text = "next activity"
 
 [connection signal="pressed" from="TextureRect/next_activity" to="." method="_on_next_activity_pressed"]
