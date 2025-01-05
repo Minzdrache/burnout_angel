@@ -8,7 +8,7 @@ var stats = {
 	"willpower": 50,
 	"stress": 60
 }
-var level = 0
+var level = 1
 
 var experience = 0
 # Updates stats based on a stat_change dictionary
@@ -17,3 +17,6 @@ func apply_stat_changes(stat_change: Dictionary) -> void:
 		if stats.has(stat):
 			stats[stat] += stat_change[stat]
 			stats[stat] = clamp(stats[stat], 0, 100)  # Clamp between 0 and 100
+
+func get_xp(experience_points: int):
+	experience += experience_points

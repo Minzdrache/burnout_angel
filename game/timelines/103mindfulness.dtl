@@ -1,0 +1,44 @@
+[background fade="0.0"]
+join lory right [mirrored="true"]
+lory (interested): Mhm...
+join angel left [animation="Slide In Down" length="2.0"]
+angel: Lost in thought again, aren’t you, Lory
+lory (embarassed): Can you blame me? There’s just… so much to think about. Deadlines, classes, what everyone expects of me... And now, this—\
+—doing nothing. It’s suffocating in its own way.
+angel: Doing nothing? Oh, Lory. You’re doing something far more important than you realize.
+lory (frown_open): Like what? Staring at clouds?
+angel: Not just staring at clouds. You’re noticing them. Their shapes, their movement, how they drift without a care in the world. That’s a start.
+lory (frown_closed): A start to what?
+angel: To practicing mindfulness. To being here in this moment, instead of trapped in the endless maze of 'what ifs' and 'should haves' in your mind.
+lory (interested): Mindfulness? Isn’t that just… sitting cross-legged and pretending you don’t have problems?
+angel: No, my dear. It’s not about pretending. It’s about accepting. Not fighting your thoughts, but letting them come and go—like clouds passing through the sky. You don’t hold on to them, do you? You just… watch.
+lory (frown_closed): But what’s the point? How does that help me fix… everything?
+angel: You don’t have to fix everything all at once. Sometimes, the first step is simply pausing. Breathing. Letting yourself feel what’s around you, instead of being swept away by the storm inside.\
+Try it. Right now. Look at the clouds. Feel the cool air coming through the window. Hear the faint hum of the world outside. Just… notice. Don’t judge it. Don’t analyze it. Just be here.
+- look at clouds
+	label clouds
+	lory (interested): Okay, I see… clouds. Moving. Some are fluffy, some are stretched thin, like cotton. And… the air smells… fresh, I guess. Like it rained earlier. It’s… quiet. Peaceful, even.
+- think about work
+	lory: I have much to do. I wonder what they will say about me. And I am just sitting here.
+	angel: I know it's not easy to stay focused when there are so many things in your life commanding your attention. Let's just  try to notice the clouds. 
+	- think about university
+		lory: I should check my mails to see if there are deadlines coming up. 
+		angel: There will be plenty of time to check your mails and think about studying when you are well again. Let's see what we can get from looking at clouds. 
+		- look at clouds
+			jump clouds
+	- look at clouds
+		jump clouds
+- stupid exercise
+	lory: I don't think it will help me to stare at floating water. 
+	angel: I understand that this might seem strange. There is much one can learn from watching the environment closely. Clouds are just one example. Would you rather like to watch something else?
+	lory: Maybe...
+	- watch cars
+		lory: Okay, I see… cars. Moving. Some parking. Some are big, some are stretched thin, for fast driving. And… they look so determined.  Like nothing can stop them. 
+	- watch clouds
+		jump clouds
+angel: Exactly. When you slow down and notice the world, you remind yourself that you’re part of it. Not a machine, not a list of tasks, but a living, breathing soul. That’s mindfulness, Lory. A way to come back to yourself when the world feels too heavy.
+lory (smile): Huh. I didn’t realize… I needed that.
+angel: You deserve moments like this. And the more you practice, the easier it’ll be to find them. Even on the hardest days.\
+Start small. Five minutes here and there. Breathe, notice, let go. You’ll be amazed at how much lighter you’ll feel.
+lory (happy): Okay. Five minutes. I think I can handle that.
+angel: I know you can. And I’ll be here to remind you, whenever you need me.

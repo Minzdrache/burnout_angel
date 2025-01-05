@@ -116,11 +116,27 @@ func load_activity(activity: Dictionary):
 			get_tree().change_scene_to_file("res://scenes/CookDinner.tscn")
 		"Work on project":
 			get_tree().change_scene_to_file("res://scenes/WorkOnProject.tscn")
-		"Take a walk":
-			get_tree().change_scene_to_file("res://scenes/TakeAWalk.tscn")
+		"Practice mindfulness":
+			get_tree().change_scene_to_file("res://scenes/activity_self_care.tscn")
 		"Read a book":
 			get_tree().change_scene_to_file("res://scenes/ReadABook.tscn")
 		_:
 			print("Unknown activity: " + activity_label)
+
 func load_next_activity():
-	
+	# Check if there are activities left for today
+	if num_todays_activity < len(todays_activities):
+		# Get the next activity
+		var next_activity = todays_activities[num_todays_activity]
+				# Print the activity being loaded for debugging purposes
+		print("[ActivitiesManager] Loading activity: " + next_activity["label"])
+		# Increment the activity counter
+		num_todays_activity += 1
+		# Load the corresponding scene for the activity
+		load_activity(next_activity)
+	else:
+		# All activities for today are completed
+		print("[ActivitiesManager] All activities for today are completed.")
+		# Optionally handle end-of-day logic here
+		# Example: Transition to end-of-day summary scene
+		get_tree().change_scene_to_file("res://scenes/review_day.tscn")

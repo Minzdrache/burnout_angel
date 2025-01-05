@@ -1,5 +1,5 @@
 extends ProgressBar
-class_name willpower_bar
+class_name health_bar
 
 var progress: int
 
@@ -10,7 +10,7 @@ func _ready():
 	set_value(progress)
 	
 func _process(_delta: float) -> void:
-	progress = StatsManager.stats["willpower"]
+	progress = StatsManager.stats["health"]
 	self.value = progress
 	
 	

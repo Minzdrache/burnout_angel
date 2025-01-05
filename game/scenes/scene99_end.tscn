@@ -63,11 +63,12 @@ text = "Menu
 "
 
 [node name="get_stats" type="Button" parent="."]
-offset_left = 47.0
-offset_top = 569.0
-offset_right = 178.0
-offset_bottom = 620.0
-text = "Show me the stats!
+offset_left = 34.0
+offset_top = 575.0
+offset_right = 165.0
+offset_bottom = 626.0
+text = "Credits
 "
 
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="get_stats" to="." method="_on_get_stats_pressed"]

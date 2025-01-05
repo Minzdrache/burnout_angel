@@ -36,6 +36,7 @@ directories/dtl_directory={
 "012doctor": "res://timelines/012doctor.dtl",
 "101calendar": "res://timelines/101calendar.dtl",
 "102self_care": "res://timelines/102self_care.dtl",
+"103mindfulness": "res://timelines/103mindfulness.dtl",
 "110challenges": "res://timelines/110challenges.dtl",
 "111walk": "res://timelines/111walk.dtl",
 "90end": "res://timelines/90end.dtl",

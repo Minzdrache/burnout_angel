@@ -15,6 +15,7 @@ texture = ExtResource("1_2q8db")
 expand_mode = 3
 
 [node name="next_activity" type="Button" parent="TextureRect"]
+layout_mode = 0
 offset_left = 1009.0
 offset_top = 586.0
 offset_right = 1143.0

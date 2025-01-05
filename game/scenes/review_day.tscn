@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqd0qa43qawb"]
+
+[ext_resource type="Script" path="res://scripts/review_day.gd" id="1_j42ew"]
+[ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="2_kauwf"]
+[ext_resource type="PackedScene" uid="uid://b8b4wuvjxyoop" path="res://scenes/stats_test_scene.tscn" id="3_8dxkl"]
+[ext_resource type="PackedScene" uid="uid://xq7oam55djhf" path="res://global/pause_manager.tscn" id="4_4q7gu"]
+[ext_resource type="Script" path="res://scripts/journal.gd" id="5_a8lco"]
+
+[node name="review_day" type="Node2D"]
+script = ExtResource("1_j42ew")
+
+[node name="background" type="ColorRect" parent="."]
+offset_right = 1158.0
+offset_bottom = 650.0
+color = Color(0.0142752, 0.0142752, 0.0142752, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 65.0
+offset_top = 40.0
+offset_right = 1092.0
+offset_bottom = 645.0
+
+[node name="title_today2" type="ColorRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="title_today4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_kauwf")
+theme_override_font_sizes/font_size = 20
+text = "You finished your first day. Congratulations!"
+horizontal_alignment = 1
+
+[node name="stats_test_scene" parent="." instance=ExtResource("3_8dxkl")]
+
+[node name="journal" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 415)
+offset_left = 151.0
+offset_top = 155.0
+offset_right = 582.0
+offset_bottom = 570.0
+script = ExtResource("5_a8lco")
+
+[node name="left" type="VBoxContainer" parent="journal"]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+
+[node name="title_journal" type="Label" parent="journal/left"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_kauwf")
+theme_override_font_sizes/font_size = 20
+text = "Journal"
+
+[node name="previous_days" type="TextEdit" parent="journal/left"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/background_color = Color(0.901961, 0.835294, 0.858824, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+placeholder_text = "Day: 0
+Activities:
+  - Work
+  - Faint at work
+  - Talk to doctor
+Journal Entries:
+  - Today I fainted at work and was sent to a doctor.
+
+Day: 1
+Activities:
+Journal Entries:
+  (No journal entries for this day.)
+"
+
+[node name="padding" type="ColorRect" parent="journal"]
+custom_minimum_size = Vector2(7, 20)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="pause_manager" parent="." instance=ExtResource("4_4q7gu")]
+visible = false
+
+[node name="next" type="Button" parent="."]
+offset_left = 995.0
+offset_top = 575.0
+offset_right = 1126.0
+offset_bottom = 626.0
+text = "next"
+
+[connection signal="pressed" from="next" to="." method="_on_next_pressed"]
