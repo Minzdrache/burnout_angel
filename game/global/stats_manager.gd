@@ -15,8 +15,14 @@ var experience = 0
 func apply_stat_changes(stat_change: Dictionary) -> void:
 	for stat in stat_change.keys():
 		if stats.has(stat):
-			stats[stat] += stat_change[stat]
-			stats[stat] = clamp(stats[stat], 0, 100)  # Clamp between 0 and 100
+			var stat_copy = stats[stat]
+			if (stat_copy > 0) && (stat_copy <= 100):
+				stats[stat] = stat_copy
+			elif stat_copy < 0:
+				stats[stat] = max(0, stat_copy)
+			elif stat_copy > 100:
+					stats[stat] = min(stat_copy, 100)
+			# stats[stat] = clamp(stats[stat], 0, 100)  # Clamp between 0 and 100
 
 func get_xp(experience_points: int):
 	experience += experience_points

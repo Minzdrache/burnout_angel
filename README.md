@@ -45,13 +45,19 @@ progress:
     minor fixes in dialouges
      fixed bug: nach Main_menu kommt man auf bedroom, von hier aus startet dann 001triggers timeline,
      nach 002first_day kommt man zurück ins bedroom, klickt "next_activity" und kommt zum Kalender (1. Aktivität läuft an), es läuft alles gut bis man wieder im Bedroom ist und auf "next_activity" klickt, dann startet 001triggers erneut...
-     fix: made started_timelines a global variable (instead of a local var in bedroom (this resets every time the scene is left!))
-    fix bug: in game when journal comes, every letter gets a seperate line... like:
+     fix used: made started_timelines a global variable (instead of a local var in bedroom (this resets every time the scene is left!))
+    fixed bug: in game when journal comes, every letter gets a seperate line... like:
       I  
       a
       m
-    fix bug: journal entry in "You finished your first game" is "placeholder..." (only appears in full game)
-
+    fixed bug: journal entry in "You finished your first game" is "placeholder..." (only appears in full game)
+todo:
+    bug: activity_doctor, activity_walk has local variable that should be public "counter"
+    bug: doctor choice looks odd
+    after mindfullness I can't go on to the journaling
+    when you reach the end and want to play again, reset_ all variables in stats_manager and activities_manager
+    test getting bars below 0
+    test dialouges without backgrounds ( so the stat bars show...)
     
 
 todo:

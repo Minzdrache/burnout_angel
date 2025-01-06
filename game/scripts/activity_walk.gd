@@ -6,6 +6,7 @@ var counter: int = ActivitiesManager.counter_walk
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 		#Dialogic.signal_event.connect(DialogicSignal)
+	ActivitiesManager.counter_walk += 1
 	if counter == 1:
 		Dialogic.start("111walk")
 			# load first doctor timeline

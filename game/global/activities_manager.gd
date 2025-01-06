@@ -3,9 +3,10 @@ extends Node
 # this class is autoloaded as a singleton ActivitiesManager (different spelling for clear use)
 # ensures that the dialouge script is loaded in bedroom if it was'nt palyed before (has to be false)
 var timelines_started = true
-var counter_walk = 0
-var counter_doctor = 0
-var counter_self_care = 0
+# make 0 for real game
+var counter_walk = 3
+var counter_doctor = 3
+var counter_self_care = 3
 
 var current_day: int = 1
 
