@@ -1,5 +1,5 @@
 extends HBoxContainer
-
+# journal
 var num_saved: int = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -19,6 +19,8 @@ func _display_previous_days() -> void:
 		
 		# Display all journal entries for the day
 		day_text += "Journal Entries:\n"
+		
+		
 		if "journal" in day_data:
 			for entry in day_data["journal"]:
 				day_text += "  - " + entry + "\n"
@@ -46,7 +48,7 @@ func _on_save_pressed() -> void:
 		current_day["journal"] = []
 	
 	# Append the new journal entry
-	current_day["journal"] += journal_entry
+	current_day["journal"].append(journal_entry)
 	num_saved += 1
 	print("added journal entry")
 	# Update the previous days display

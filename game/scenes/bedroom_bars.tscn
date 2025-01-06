@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgomtlfjwengv"]
+
+[ext_resource type="PackedScene" uid="uid://dhrjuan7fjhoa" path="res://scenes/bedroom.tscn" id="1_c0030"]
+[ext_resource type="Texture2D" uid="uid://dilrbnjumim2e" path="res://Bilder/single bedroom.jpg" id="1_sdt1x"]
+[ext_resource type="PackedScene" uid="uid://b8b4wuvjxyoop" path="res://scenes/stats_test_scene.tscn" id="2_12rdi"]
+
+[node name="bedroom_bars" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 1156.0
+offset_bottom = 647.0
+texture = ExtResource("1_sdt1x")
+expand_mode = 3
+
+[node name="bedroom" parent="." instance=ExtResource("1_c0030")]
+visible = false
+
+[node name="stats_test_scene" parent="." instance=ExtResource("2_12rdi")]

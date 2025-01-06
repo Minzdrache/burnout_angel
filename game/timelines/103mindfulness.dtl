@@ -1,4 +1,4 @@
-[background fade="0.0"]
+[background arg="res://Bilder/single bedroom.jpg" fade="0.0"]
 join lory right [mirrored="true"]
 lory (interested): Mhm...
 join angel left [animation="Slide In Down" length="2.0"]
@@ -20,20 +20,20 @@ Try it. Right now. Look at the clouds. Feel the cool air coming through the wind
 	lory (interested): Okay, I see… clouds. Moving. Some are fluffy, some are stretched thin, like cotton. And… the air smells… fresh, I guess. Like it rained earlier. It’s… quiet. Peaceful, even.
 - think about work
 	lory: I have much to do. I wonder what they will say about me. And I am just sitting here.
-	angel: I know it's not easy to stay focused when there are so many things in your life commanding your attention. Let's just  try to notice the clouds. 
+	angel: I know it's not easy to stay focused when there are so many things in your life commanding your attention. Let's just  try to notice the clouds.
 	- think about university
-		lory: I should check my mails to see if there are deadlines coming up. 
-		angel: There will be plenty of time to check your mails and think about studying when you are well again. Let's see what we can get from looking at clouds. 
+		lory: I should check my mails to see if there are deadlines coming up.
+		angel: There will be plenty of time to check your mails and think about studying when you are well again. Let's see what we can get from looking at clouds.
 		- look at clouds
 			jump clouds
 	- look at clouds
 		jump clouds
 - stupid exercise
-	lory: I don't think it will help me to stare at floating water. 
+	lory: I don't think it will help me to stare at floating water.
 	angel: I understand that this might seem strange. There is much one can learn from watching the environment closely. Clouds are just one example. Would you rather like to watch something else?
 	lory: Maybe...
 	- watch cars
-		lory: Okay, I see… cars. Moving. Some parking. Some are big, some are stretched thin, for fast driving. And… they look so determined.  Like nothing can stop them. 
+		lory: Okay, I see… cars. Moving. Some parking. Some are big, some are stretched thin, for fast driving. And… they look so determined.  Like nothing can stop them.
 	- watch clouds
 		jump clouds
 angel: Exactly. When you slow down and notice the world, you remind yourself that you’re part of it. Not a machine, not a list of tasks, but a living, breathing soul. That’s mindfulness, Lory. A way to come back to yourself when the world feels too heavy.

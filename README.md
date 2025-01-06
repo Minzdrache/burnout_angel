@@ -41,11 +41,25 @@ progress:
     journal minigame (in progress), fixed: progress bars update as result of finishing journal minigame
     connect scenes to get fully playable game, minor fix: connected main_menu with bedroom and bedroom with timelines
     made font equal everywhere (except the source and target container of calendar, except the dialouge (maybe find a better font for dialouges)...)
+* 06.01.2025:
+    minor fixes in dialouges
+     fixed bug: nach Main_menu kommt man auf bedroom, von hier aus startet dann 001triggers timeline,
+     nach 002first_day kommt man zurück ins bedroom, klickt "next_activity" und kommt zum Kalender (1. Aktivität läuft an), es läuft alles gut bis man wieder im Bedroom ist und auf "next_activity" klickt, dann startet 001triggers erneut...
+     fix: made started_timelines a global variable (instead of a local var in bedroom (this resets every time the scene is left!))
+    fix bug: in game when journal comes, every letter gets a seperate line... like:
+      I  
+      a
+      m
+    fix bug: journal entry in "You finished your first game" is "placeholder..." (only appears in full game)
+
+    
 
 todo:
     fix font in source and target container of calendar
     picture with facial expressions for angel (not yet implemented)
     get sounds to all dialouge scenes
+    make screenshots of bedroom_bars scene and make them as background in timeline 002first_day
+   
 
     additional character ideas: 
         angel? change colors and add wings https://noranekogames.itch.io/chie-free-character-sprite

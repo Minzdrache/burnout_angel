@@ -23,3 +23,5 @@ offset_right = 1143.0
 offset_bottom = 636.0
 theme_override_fonts/font = ExtResource("3_mjg4s")
 text = "next activity"
+
+[connection signal="pressed" from="TextureRect/next_activity" to="." method="_on_next_activity_pressed"]

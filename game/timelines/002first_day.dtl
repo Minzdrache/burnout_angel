@@ -3,9 +3,9 @@
 # The third timeline. The first day after the emergency. 
 # explain what burnout is? 
 join lory left
-Lory wakes up in her  bedroom, sunlight streaming through the curtains. She sits up, rubbing her eyes, and recalls the dream from the night before. The angel’s voice echoes in her mind\: “Let’s find your balance, together.” A soft glow appears in the corner of the room, and the angel materializes once more.
-lory: Weird dream. There are no angels.
-join angel right
+Lory wakes up in her  bedroom, sunlight streaming through the curtains. She sits up, rubbing her eyes, and recalls the dream from the night before. The angel’s voice echoes in her mind\: “Let’s find your balance, together.” 
+lory (interested): Weird dream. There are no angels.
+join angel right [animation="Fade In Down"]
 # happy angel
 angel: Good morning! I’m here, and I’m as real as the changes you’re about to make. You’ve taken the first step by deciding you want a better life. Now, let’s figure out how to make that happen.
 # make status bars appear
@@ -30,4 +30,5 @@ lory: That’s… a lot to keep track of. What happens if one bar drops too low?
 angel: When one bar is empty, the others will start to suffer. But don’t worry—I’m here to help you keep them balanced. Think of these bars as guides, not rules. You don’t have to be perfect, just mindful.
 angel: Your choices today will affect these bars. Let’s start small—plan your day, listen to what these bars tell you, and remember to take care of yourself. I’ll be here whenever you need guidance.
 lory: Okay. I’ll try. Thank you for showing me this… it feels like I can actually see what’s going on now.
+angel: I think you are ready for the day. It's now time to choose what you want to do. Choose from the activities that boost your willpower. We need more of it to resist overworking and to strengthen your health.  
 leave angel [animation="Fade Out Up"]

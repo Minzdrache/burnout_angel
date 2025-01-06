@@ -1,40 +1,38 @@
 [style name="style1"]
 [background arg="res://Bilder/celestial.jpg" fade="0.0"]
 # The first timeline. Gives trigger warnings, checks players mood.
-join angel center
-angel: Hello and welcome to "Burnout Angel".  This game is about a young woman struggling with burnout. You will learn about burnout symptoms and consequences. With the help of an angel you can try out self-care routines and find a way to take care of your needs.
-angel: Trigger Warning\:\
+Hello and welcome to "Burnout Angel".  This game is about a young woman struggling with burnout. You will learn about burnout symptoms and consequences. With the help of an angel you can try out self-care routines and find a way to take care of your needs.
+Trigger Warning\:\
 This game contains themes of mental exhaustion, burnout, anxiety, depression,  and strained relationships. Some scenes may include depictions of overwhelming workloads, intrusive thoughts, and feelings of inadequacy. If you find these themes challenging, please prioritize your well-being and seek support if needed. Please proceed with care, and remember that it’s okay to take breaks or step away.\
 Please play this game in a positive or neutral mood. I do not reccomend playing while beeing sad. If you are feeling positive,  you can jump right in.  \:D
-angel: Feelings are an essential part of being human. They are our mind and body’s way of communicating how we experience the world around us. Whether positive, negative, or neutral, feelings give us important information about our needs, desires, and reactions to life’s challenges. Feelings help us recognize what matters in our lives. They guide our decisions, protect us from harm, and connect us with others. \
+Feelings are an essential part of being human. They are our mind and body’s way of communicating how we experience the world around us. Whether positive, negative, or neutral, feelings give us important information about our needs, desires, and reactions to life’s challenges. Feelings help us recognize what matters in our lives. They guide our decisions, protect us from harm, and connect us with others. \
 Ignoring feelings can lead to stress and burnout, while understanding them improves mental and physical well-being. All feelings are valid and temporary.\
 Recognizing them is the first step toward meaningful action.
 label moodcheck
-angel: How are you feeling right now?
+How are you feeling right now?
 # maybe provide a list of emotions to choose from. Store the mood in an outside variable and add a number (each time the mood gets saved, increse by 1), is to make as statistic about the users feelings
 - positive
 	- excited
 	- content
 	- happy
-	angel: That's great! I am glad you are in a good mood.
+	That's great! I am glad you are in a good mood.
 - neutral
 	- tired
 	- bored
 	- unsure
-	angel: That's an ok way to start. I hope this game brings fun and excitement.
+	That's an ok way to start. I hope this game brings fun and excitement.
 - negative
 	- stressed
 	- sad
 	- depressed
 	# Change angel emotion to sad.
-	angel: Oh no, I am sorry you feel like that. This game is reccomended for players with a neutral to positive mood.
+	Oh no, I am sorry you feel like that. This game is reccomended for players with a neutral to positive mood.
 	jump get help
-angel: Let's see how you like this game.
+Let's see how you like this game.
 Are you ready to start the game?
 - Absolutely!
 	Let's start the game!
 	[wait time="0.1"]
-	leave angel
 	jump 001start/
 - No, I want to check out some help.
 	# Maybe make a seperate timeline/scene just for getting help. 

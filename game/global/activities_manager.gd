@@ -1,6 +1,12 @@
 extends Node
 # class_name activities_manager
 # this class is autoloaded as a singleton ActivitiesManager (different spelling for clear use)
+# ensures that the dialouge script is loaded in bedroom if it was'nt palyed before (has to be false)
+var timelines_started = true
+var counter_walk = 0
+var counter_doctor = 0
+var counter_self_care = 0
+
 var current_day: int = 1
 
 # List of activities planned for each day
@@ -41,7 +47,6 @@ var all_activities = [
 
 
 func _ready() -> void:
-	pass
 	# Initialize activities_per_day with empty lists for a few days
 	for i in range(1, 2): # Example: 7 days
 		activities_per_day.append({"day": i, "activities": []})
@@ -75,7 +80,7 @@ func add_activity_to_day(label: String, stat_change: Dictionary, day: int) -> vo
 	for day_entry in activities_per_day:
 		if day_entry["day"] == day:
 			day_entry["activities"].append({"label": label, "stat_change": stat_change})
-			day_entry["journal"] = "placeholder"
+			day_entry["journal"] = []
 		 # If the day matches the current day, update todays_activities
 			if day == ActivitiesManager.current_day:
 				todays_activities = day_entry["activities"]
@@ -128,7 +133,7 @@ func load_next_activity():
 	# Check if there are activities left for today
 	if todays_activities == []:
 		get_tree().change_scene_to_file("res://scenes/scene2_calendar.tscn")
-	elif num_todays_activity < len(todays_activities):
+	elif num_todays_activity < 3:
 		# Get the next activity
 		var next_activity = todays_activities[num_todays_activity]
 				# Print the activity being loaded for debugging purposes

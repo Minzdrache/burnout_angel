@@ -24,6 +24,8 @@ update lory left [move_time="1.1"]
 # Change background to shop
 [background arg="res://Bilder/cafe_day_goods.png" fade="0.0"]
 [style name="style1"]
+# play cafe music
+[music fade="0.0" volume="0.0"]
 The day starts with Lory arriving at the coffee shop ten minutes early, as usual—she can’t risk being late. The bright lighting hurts her eyes, and she wishes she could adjust it, but that’s out of her control.\
 The first customer walks in minutes after the shop opens. Lory greets them with a polite smile, even though she feels exhausted. Her feet already ache from standing, and it’s only the beginning of her shift. She glances at the radio as a familiar song begins to play—again. It’s the third time this week she’s heard the same playlist on repeat, and the monotonous tunes blur into background noise, amplifying her frustration.\
 Throughout the day, the steady hum of activity offers little respite. She cuts cake, answers questions about textures and ingredients, and helps customers get their daily bread. For a moment, she feels a flicker of joy—she loves talking about pastries and imagining how people will enjoy them. But the moment is fleeting.
@@ -37,10 +39,13 @@ update lory [animation="Tada" length="0.3" wait="true" repeat="3"]
 lory: I don't feel so good.
 [wait time="1.0"]
 update lory left [animation="Shake X" repeat="3" z_index="5" move_time="3.0"]
+<Empty Text Event>
+# make background black
+[background arg="res://Bilder/Play.png" fade="0.0"]
 leave lory [animation="Fade Out"]
-# maybe make Lory fall? 
 Seeing Lory faint infront of the customers, her colleagues call an ambulance.
 [voice path="459880__dominikbraun__emergency-siren-martinshorn.wav" volume="4.6"]
+[background arg="res://Bilder/cafe_day_goods.png" fade="0.0"]
 The medics check Lorys vitals and find that she is healthy.
 [wait time="3.0"]
 [background arg="res://Bilder/single bedroom.jpg" fade="0.0"]
@@ -48,32 +53,34 @@ The medics check Lorys vitals and find that she is healthy.
 Lorys Dad brings her home. \
 Lory rests a bit.
 # doctor tests: hearing and sense of balance, a Neurologist and one for blood analysis. 
+[sound volume="0.0"]
+# paly something else than sirene/ stop sirene
+[background arg="res://Bilder/doctor_office.jpg" fade="0.0"]
 Then her Dad gets her to a doctor. \
-The doctor couldn't find a cause right away and reccomends that Lory should rest and come back tomorrow. The doctor writes her a medical certificate and Lory gets the next days off as sick leave. \
-Strange. If Lory is healthy, why would she faint on a normal day?
+The doctor couldn't find a cause right away and reccomends that Lory should rest and come back tomorrow. The doctor writes her a medical certificate and Lory gets the next days off as sick leave. 
 [background arg="res://Bilder/single bedroom.jpg" fade="0.0"]
 Back in her room, Lory goes to bed.
 # set background to dark then to angelic, evtl change style to Sprechblasen
 [background arg="res://Bilder/celestial.jpg" fade="0.0"]
-update lory left
-lory: What is this, what happened?
+join lory (interested) right
+lory (interested): What is this, what happened?
 label angelcomes
 [voice path="res://sounds/angel430892__gsb1039__magic-1-grainsmooth.wav" volume="6.0"]
 [wait time="3.0"]
-join angel right
+join angel left [animation="Fade In Down"]
 angel: Hello Lory. I am your angel. I am here to help you find balance. There’s so much going on, Lory, and it’s too much for one person to handle alone.
 # change Lorys face to sad
 lory (embarassed): I know. I just… I feel like I’m drowning. I can’t keep up with everything, and no matter how hard I try, it’s never enough.
 angel: I know how you feel, and I see the weight you’re carrying. But you don’t have to carry it all by yourself. Life isn’t about doing everything perfectly—it’s about finding the things that truly matter and letting go of what doesn’t.
-lory: But how? I don’t even know where to start. My work, my studies, my family, Valerie… it’s like everything is demanding something from me all at once.
+lory (frown_open): But how? I don’t even know where to start. My work, my studies, my family, Valerie… it’s like everything is demanding something from me all at once.
 angel: That’s where I come in. Together, we’ll figure out what’s draining you the most and find ways to restore your energy. We’ll sort through the chaos, one step at a time. But first, Lory, you need to believe that your well-being matters just as much as everything else you care about.
-lory: I don’t even remember what that feels like… to take care of myself. I just feel guilty if I do.
+lory (frown_closed): I don’t even remember what that feels like… to take care of myself. I just feel guilty if I do.
 # angel gets closer
 angel: Guilt is a heavy burden, but it’s not yours to bear. You are human, Lory, and humans need rest, care, and kindness—even from themselves. Let’s start by understanding what’s truly important to you, and we’ll build from there.
-lory: Okay… I’ll try. But what if I mess up again? What if I can’t fix everything?
+lory (interested): Okay… I’ll try. But what if I mess up again? What if I can’t fix everything?
 angel: You don’t need to fix everything, Lory. Life isn’t about being perfect—it’s about progress. Every small step you take will lead to something better. And remember, I’m here to guide you whenever you need me.\
 Let’s find your balance, together.
-lory: Thank you… I am glad to have you.
-leave angel
+lory (smile): Thank you… I am glad to have you.
+leave angel [animation="Fade Out Up"]
 leave lory
 jump 002first_day/
