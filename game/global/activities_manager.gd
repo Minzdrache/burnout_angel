@@ -8,7 +8,8 @@ var activities_per_day: Array = [
 	{"day": 0, "activities": [{"label": "Work"}, {"label": "Faint at work"}, {"label": "Talk to doctor"}], "journal": ["Today I fainted at work and was sent to a doctor."]}
 ]
 # prepopulated for testing
-var todays_activities: Array = [ {"label": "Go for a walk"}, {"label": "Visit doctor"}, {"label": "Study"}]
+var todays_activities: Array = []
+#var todays_activities: Array = [ {"label": "Go for a walk"}, {"label": "Visit doctor"}, {"label": "Study"}]
 
 var num_todays_activity: int = 0 # gets updated when an activity is loaded
 # Global list of activities and their stat impacts
@@ -125,7 +126,9 @@ func load_activity(activity: Dictionary):
 
 func load_next_activity():
 	# Check if there are activities left for today
-	if num_todays_activity < len(todays_activities):
+	if todays_activities == []:
+		get_tree().change_scene_to_file("res://scenes/scene2_calendar.tscn")
+	elif num_todays_activity < len(todays_activities):
 		# Get the next activity
 		var next_activity = todays_activities[num_todays_activity]
 				# Print the activity being loaded for debugging purposes

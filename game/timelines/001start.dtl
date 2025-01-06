@@ -2,29 +2,37 @@
 [background arg="res://Bilder/celestial.jpg" fade="0.0"]
 [style name="style1"]
 [voice path="res://sounds/743368__viramiller__heavenly-calm.mp3" volume="6.0"]
-angel: Welcome to Burnout Angel, an interactive journey through the complex and overwhelming life of Lory, a university student juggling the weight of too many expectations. Between her part-time job, intense academic workload, commitments to a social club, and family obligations, Lory’s days feel like a race with no finish line. On top of it all, her strained relationship with her partner, Valerie, adds an emotional toll that leaves her questioning her ability to keep it all together.
-angel: In this game, you’ll step into Lory’s shoes and take control of her daily calendar—navigating a maze of choices about how to spend her time. Each decision will affect her mood, willpower, health, and relationships. The more Lory pushes herself, the greater the risks to her mental and physical well-being. But by prioritizing wisely, making time for self-care, and setting boundaries, you’ll help Lory find a path toward balance and resilience.
-angel: Will you help Lory survive her packed schedule without losing herself in the process? Or will burnout consume her entirely?
-angel: Take a deep breath. Your choices will shape Lory’s future—and maybe inspire you to rethink your own.\
+angel: Welcome to Burnout Angel, an interactive journey through the complex and overwhelming life of Lory, a university student juggling the weight of too many expectations. Between her part-time job, intense academic workload, commitments to a social club, and family obligations, Lory’s days feel like a race with no finish line. On top of it all, her strained relationship with her partner, Valerie, adds an emotional toll that leaves her questioning her ability to keep it all together.\
+\
+In this game, you’ll step into Lory’s shoes and take control of her daily calendar—navigating a maze of choices about how to spend her time. Each decision will affect her mood, willpower, health, and relationships. The more Lory pushes herself, the greater the risks to her mental and physical well-being. But by prioritizing wisely, making time for self-care, and setting boundaries, you’ll help Lory find a path toward balance and resilience.
+angel: Will you help Lory survive her packed schedule without losing herself in the process? Or will burnout consume her entirely?\
+Take a deep breath. Your choices will shape Lory’s future—and maybe inspire you to rethink your own.\
 Let’s begin.
+[style name="style1"]
+update angel right
 join lory center
 [voice path="res://sounds/angel430892__gsb1039__magic-1-grainsmooth.wav" volume="6.0"]
-angel: This is Lory.\
-Lory is a 21-year-old university student with big dreams but an overwhelming schedule. She’s passionate about her education and determined to secure a bright future, but between her part-time job, academic demands, her role in a social club, and family expectations, her life feels like a constant balancing act.
-angel: Lory has always been the type to say “yes” to everything—whether it’s taking on extra shifts at work, helping a friend with a project, or joining another campus event. Deep down, she worries about letting people down and believes she can handle it all if she just works harder. But lately, cracks have started to show.
-angel: Her relationship with her partner, Valerie, once a source of comfort, has become strained. Miscommunication and emotional tension have left Lory feeling drained and uncertain. With no time to properly rest, Lory’s energy and mood are slipping, and she’s starting to question whether she can keep up with the pace she’s set for herself.
-angel: Despite her struggles, Lory is resilient, resourceful, and determined to find a way forward. She’s not just fighting to meet deadlines—she’s fighting to find balance and rediscover joy in her life.
+lory: Hi, I’m Lory.\
+\
+I’m 21, a university student with big dreams, and a schedule that feels like it’s bursting at the seams. I’m passionate about my education and determined to build a bright future for myself. But between my part-time job, the pressure of my studies, my role in the university’s social club, and everything my family needs from me, it feels like I’m constantly juggling too much.\
+I’ve always been the kind of person who says “yes” to everything—extra shifts at work, helping a friend with their project, joining another campus event. I tell myself I can handle it all if I just push a little harder. Honestly, I hate the idea of letting anyone down.\
+But lately... I’ve started to notice the cracks. I feel tired all the time, like I’m running on empty. Sometimes I wonder if I’m doing too much, but I always push that thought aside. After all, I should be able to handle this. Right?
+# maybe show Valerie? Or introduce this in a later level
+lory: My relationship with my partner, Valerie, used to be my safe space, a source of comfort when things got tough. But lately, it’s felt so strained. Miscommunication and emotional tension between us have left me feeling drained and uncertain.\
+With everything else going on, I don’t even have the time or energy to address what’s happening between us—or to properly rest. My energy is slipping, my mood is all over the place, and I’m starting to wonder how much longer I can keep up with this pace. I’m trying so hard to find balance, to rediscover some joy in my life, but it feels like an uphill battle I’m not sure I can win.
 update lory left [move_time="1.1"]
 # Change background to shop
 [background arg="res://Bilder/cafe_day_goods.png" fade="0.0"]
-angel: The day starts with Lory arriving at the fabric shop ten minutes early, as usual—she can’t risk being late. The bright lighting hurts her eyes, and she wishes she could adjust it, but that’s out of her control.\
+[style name="style1"]
+The day starts with Lory arriving at the coffee shop ten minutes early, as usual—she can’t risk being late. The bright lighting hurts her eyes, and she wishes she could adjust it, but that’s out of her control.\
 The first customer walks in minutes after the shop opens. Lory greets them with a polite smile, even though she feels exhausted. Her feet already ache from standing, and it’s only the beginning of her shift. She glances at the radio as a familiar song begins to play—again. It’s the third time this week she’s heard the same playlist on repeat, and the monotonous tunes blur into background noise, amplifying her frustration.\
-Throughout the day, the steady hum of activity offers little respite. She cuts fabric, answers questions about textures and patterns, and helps customers match colors for their projects. For a moment, she feels a flicker of joy—she loves talking about fabrics and imagining what people will create. But the moment is fleeting.\
+Throughout the day, the steady hum of activity offers little respite. She cuts cake, answers questions about textures and ingredients, and helps customers get their daily bread. For a moment, she feels a flicker of joy—she loves talking about pastries and imagining how people will enjoy them. But the moment is fleeting.
 The bosses rotate in and out of the shop, each giving her conflicting instructions. One wants her to rearrange the display shelves; the other tells her to focus on reorganizing the back stock. Lory feels like she’s caught in the middle, unsure whose instructions to follow. She can’t voice her frustration—it wouldn’t change anything. She’s tried that before, but her boss didn’t like that and got angry with her.  \
 When a short break finally comes, she tries to find a quiet corner to catch her breath, but there’s no real privacy in the small, crowded break room. She eats quickly, knowing she needs to get back to the floor. Her shoulders tense as she imagines the growing pile of tasks waiting for her.\
-As much as Lory loves the fabrics, the rigid conditions and constant pressure are slowly chipping away at her joy. A new pair of customers approach her. She sighs, staring at white curtain fabric in front of her. The customers ask about the different shades of white. Lory thinks to herself\:
-lory (frown_open): Just buy something and leave me alone. I don’t care what curtain you buy, just get something!
+As much as Lory loves the pastries, the rigid conditions and constant pressure are slowly chipping away at her joy. A new pair of customers approach her. She sighs, staring at cream cake in front of her. The customers ask about the different types of cream. Lory thinks to herself\:
 [style name="visual_novel_permade"]
+join lory center
+lory (frown_open): Just buy something and leave me alone. I don’t care what cake you buy, just get something!
 update lory [animation="Tada" length="0.3" wait="true" repeat="3"]
 lory: I don't feel so good.
 [wait time="1.0"]
@@ -32,16 +40,19 @@ update lory left [animation="Shake X" repeat="3" z_index="5" move_time="3.0"]
 leave lory [animation="Fade Out"]
 # maybe make Lory fall? 
 Seeing Lory faint infront of the customers, her colleagues call an ambulance.
-[voice path="res://sounds/459880__dominikbraun__emergency-siren-martinshorn.wav" volume="4.6"]
+[voice path="459880__dominikbraun__emergency-siren-martinshorn.wav" volume="4.6"]
 The medics check Lorys vitals and find that she is healthy.
 [wait time="3.0"]
 [background arg="res://Bilder/single bedroom.jpg" fade="0.0"]
+[sound volume="0.0"]
 Lorys Dad brings her home. \
 Lory rests a bit.
-Then her Dad gets her to a doctor. Again, the doctor can't find a serious illness. \
-Strange. If Lory is healthy, why would she faint on a normal day?\
-The doctor reccomends that  Lory should go to different doctors one for hearing and sense of balance, a Neurologist and one for blood analysis. \
-Lory gets the next days off as sick leave.
+# doctor tests: hearing and sense of balance, a Neurologist and one for blood analysis. 
+Then her Dad gets her to a doctor. \
+The doctor couldn't find a cause right away and reccomends that Lory should rest and come back tomorrow. The doctor writes her a medical certificate and Lory gets the next days off as sick leave. \
+Strange. If Lory is healthy, why would she faint on a normal day?
+[background arg="res://Bilder/single bedroom.jpg" fade="0.0"]
+Back in her room, Lory goes to bed.
 # set background to dark then to angelic, evtl change style to Sprechblasen
 [background arg="res://Bilder/celestial.jpg" fade="0.0"]
 update lory left
@@ -63,4 +74,6 @@ lory: Okay… I’ll try. But what if I mess up again? What if I can’t fix eve
 angel: You don’t need to fix everything, Lory. Life isn’t about being perfect—it’s about progress. Every small step you take will lead to something better. And remember, I’m here to guide you whenever you need me.\
 Let’s find your balance, together.
 lory: Thank you… I am glad to have you.
+leave angel
+leave lory
 jump 002first_day/

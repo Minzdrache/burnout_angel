@@ -1,11 +1,11 @@
 # stat bars appear
-[background arg="res://Bilder/Noraneko_Backgrounds_Pack_2/Bedroom_Day.png" fade="0.0"]
+[background arg="res://Bilder/single bedroom.jpg" fade="0.0"]
 # The third timeline. The first day after the emergency. 
 # explain what burnout is? 
 join lory left
-Lory wakes up in her small bedroom, sunlight streaming through the curtains. She sits up, rubbing her eyes, and recalls the dream from the night before. The angel’s voice echoes in her mind\: “Let’s find your balance, together.” A soft glow appears in the corner of the room, and the angel materializes once more.
+Lory wakes up in her  bedroom, sunlight streaming through the curtains. She sits up, rubbing her eyes, and recalls the dream from the night before. The angel’s voice echoes in her mind\: “Let’s find your balance, together.” A soft glow appears in the corner of the room, and the angel materializes once more.
 lory: Weird dream. There are no angels.
-join angel center
+join angel right
 # happy angel
 angel: Good morning! I’m here, and I’m as real as the changes you’re about to make. You’ve taken the first step by deciding you want a better life. Now, let’s figure out how to make that happen.
 # make status bars appear
@@ -31,4 +31,3 @@ angel: When one bar is empty, the others will start to suffer. But don’t worry
 angel: Your choices today will affect these bars. Let’s start small—plan your day, listen to what these bars tell you, and remember to take care of yourself. I’ll be here whenever you need guidance.
 lory: Okay. I’ll try. Thank you for showing me this… it feels like I can actually see what’s going on now.
 leave angel [animation="Fade Out Up"]
-jump 003calendar/
