@@ -87,7 +87,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_t5vbt")
 theme_override_styles/normal = SubResource("StyleBoxFlat_y0sc0")
 text = "Start game"
 
-[node name="options" type="Button" parent="VBoxContainer"]
+[node name="help" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
@@ -101,7 +101,23 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_jci1r")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ww86v")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_t5vbt")
 theme_override_styles/normal = SubResource("StyleBoxFlat_y0sc0")
-text = "Options"
+text = "Help"
+
+[node name="credits" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_axqly")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jci1r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ww86v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_t5vbt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_y0sc0")
+text = "Credits"
 
 [node name="exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -143,5 +159,6 @@ visible = false
 position = Vector2(-2, -1)
 
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/help" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="VBoxContainer/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]

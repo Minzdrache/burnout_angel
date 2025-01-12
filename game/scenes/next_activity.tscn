@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd3fueljn57uy"]
+
+[ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="1_rw1kd"]
+
+[node name="next_activity" type="Button"]
+offset_left = 993.0
+offset_top = 576.0
+offset_right = 1127.0
+offset_bottom = 626.0
+theme_override_fonts/font = ExtResource("1_rw1kd")
+text = "next activity"

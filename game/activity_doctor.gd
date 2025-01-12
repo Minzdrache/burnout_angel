@@ -1,11 +1,11 @@
 extends Node2D
 # counter counts how many times this scene is called
 # 
-var counter: int = 0
+var counter: int = ActivitiesManager.counter_doctor
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	counter += 1
+	ActivitiesManager.counter_doctor += 1
 	#Dialogic.signal_event.connect(DialogicSignal)
 	if counter < 2:
 		Dialogic.start("011doctor")

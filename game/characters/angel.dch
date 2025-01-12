@@ -23,6 +23,60 @@
 "offset": Vector2(0, 6),
 "scale": 1,
 "scene": ""
+},
+"anger": {
+"export_overrides": {
+"image": "\"res://Bilder/angel/princess_anger.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"frown": {
+"export_overrides": {
+"image": "\"res://Bilder/angel/princess_frown.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"joy": {
+"export_overrides": {
+"image": "\"res://Bilder/angel/princess_joy.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"neutral": {
+"export_overrides": {
+"image": "\"res://Bilder/angel/princess_neutral.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"shock": {
+"export_overrides": {
+"image": "\"res://Bilder/angel/princess_shock.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"smile": {
+"export_overrides": {
+"image": "\"res://Bilder/angel/princess_smile.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
 }
 },
 "scale": 1.0

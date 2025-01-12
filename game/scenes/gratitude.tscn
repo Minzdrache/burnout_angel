@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://xrdptxp7cxog"]
+
+[ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="1_0cfhk"]
+[ext_resource type="Script" path="res://scenes/gratitude.gd" id="1_vr6ye"]
+[ext_resource type="PackedScene" uid="uid://dhrjuan7fjhoa" path="res://scenes/bedroom.tscn" id="2_sm0ue"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_co41r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qgg81"]
+bg_color = Color(0.290368, 0.608996, 0.608874, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.284718, 0.607566, 0.660299, 1)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t37xl"]
+bg_color = Color(1.20327e-06, 0.52606, 0.528086, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.341176, 0.537255, 0.537255, 1)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0qul"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.341176, 0.537255, 0.537255, 1)
+shadow_size = 5
+
+[node name="gratitude" type="Node2D"]
+script = ExtResource("1_vr6ye")
+
+[node name="bedroom" parent="." instance=ExtResource("2_sm0ue")]
+
+[node name="start" type="Button" parent="."]
+offset_left = 418.0
+offset_top = 325.0
+offset_right = 826.0
+offset_bottom = 356.0
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_0cfhk")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_co41r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qgg81")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_t37xl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a0qul")
+text = "write gratitude journal"

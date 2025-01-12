@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ccwowwp3fm5n1"]
+[gd_scene load_steps=12 format=3 uid="uid://ccwowwp3fm5n1"]
 
 [ext_resource type="Script" path="res://scripts/activity_journal.gd" id="1_1eqp7"]
 [ext_resource type="Texture2D" uid="uid://dilrbnjumim2e" path="res://Bilder/single bedroom.jpg" id="2_1t4ad"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://xq7oam55djhf" path="res://global/pause_manager.tscn" id="3_5gmd1"]
 [ext_resource type="Script" path="res://scripts/journal.gd" id="4_w8p4q"]
 [ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="5_qwg5q"]
+[ext_resource type="PackedScene" uid="uid://bd3fueljn57uy" path="res://scenes/next_activity.tscn" id="6_k8cin"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7wje7"]
 
@@ -160,12 +161,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_8rkxw")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8jnph")
 text = "Save Entry"
 
-[node name="next_activity" type="Button" parent="."]
-offset_left = 1009.0
-offset_top = 586.0
-offset_right = 1143.0
-offset_bottom = 636.0
-text = "next activity"
+[node name="next_activity" parent="." instance=ExtResource("6_k8cin")]
 
 [node name="pause_manager" parent="." instance=ExtResource("3_5gmd1")]
 visible = false

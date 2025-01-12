@@ -51,20 +51,29 @@ progress:
       a
       m
     fixed bug: journal entry in "You finished your first game" is "placeholder..." (only appears in full game)
+    fixed bug: activity_doctor, activity_walk has local variable that should be public "counter"
+* 12.01.2025: 
+    after all 3 activities are done, make gratitude journal (with timeline intro )
+    made "next activity" into an extra scene that is included in all scenes (where it is necessary)
+    fixes repülayability: when you reach the end and want to play again, reset_ all variables in stats_manager and activities_manager
+    write extra function to reset stats, not do each individually in start button
+    fixed bug: bars dont move... (was because the update function in stats_manager was wrong)
+    fixed bug: doctor choice looks odd
+    added cafe music, added walking sounds
+    added picture with facial expressions for angel
 todo:
-    bug: activity_doctor, activity_walk has local variable that should be public "counter"
-    bug: doctor choice looks odd
+    activity_walk dialouge does not get played
+    before journaling: implement a dialouge
     after mindfullness I can't go on to the journaling
-    when you reach the end and want to play again, reset_ all variables in stats_manager and activities_manager
-    test getting bars below 0
     test dialouges without backgrounds ( so the stat bars show...)
+    make "next" and similar buttons into extra script and include them....
     
 
 todo:
     fix font in source and target container of calendar
     picture with facial expressions for angel (not yet implemented)
     get sounds to all dialouge scenes
-    make screenshots of bedroom_bars scene and make them as background in timeline 002first_day
+    make all buttons in same design (like in main_menu)
    
 
     additional character ideas: 

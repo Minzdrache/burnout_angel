@@ -2,15 +2,14 @@
 join doctor (smile) right [mirrored="true"]
 \doctor: Come in.
 join lory (interested) left
-\doctor:  Good morning, Lory. I’m Dr. Meyers. I hear you fainted yesterday. How are you feeling today?
+\doctor: Good morning, Lory. I’m Dr. Meyers. I hear you fainted yesterday. How are you feeling today?
 lory: I’m okay, I think. Just… a little tired.
 \doctor (frown_closed): Hmm. Tired how? Are you feeling physically weak or mentally drained?
 lory (frown_closed): Uh… both, maybe? I don’t know. I’ve been feeling kind of… off lately.
 \doctor (frown_open): I see. Let’s start with some basics. Have you been eating regularly? Skipping meals?
-- 
-	- No
-	- Maybe
-	- Yes
+- No
+- Maybe
+- Yes
 # user can lie, but every lie gets counted, after too many lies, Lory has to ???
 lory: Um… I guess I’ve missed a few here and there. But it’s not like on purpose or anything—I just get busy.
 \doctor: And how about hydration? Are you drinking enough water during the day?
@@ -20,11 +19,11 @@ How about sleep? Are you getting enough rest?
 lory (embarassed): …Not really. I’m a student, and I’ve been working part-time, so things have been… busy.
 \doctor (doubt): I understand. Sleep deprivation could very well be contributing to what happened yesterday.\
 Now, have you experienced anything else unusual? Headaches? Dizziness? Blurred vision?
-lory (interested):  I get headaches sometimes, yeah. But I thought that was normal.
+lory (interested): I get headaches sometimes, yeah. But I thought that was normal.
 \doctor: Not necessarily. How often do they happen?
 lory (frown_closed): Maybe a couple times a week? Sometimes more.
 \doctor (smile): Alright. We’ll look into that too. Fainting can be caused by a lot of different things—low blood sugar, dehydration, exhaustion, or even something neurological. I’d like to do some tests to rule out anything serious.
-lory (embarassed):  Like… what kind of tests?
+lory (embarassed): Like… what kind of tests?
 \doctor: Nothing too scary, I promise. I’d like to check your bloodwork first—just to see if there’s anything like anemia or low blood sugar contributing to this. We’ll also run a few neurological checks to make sure your brain function is normal. Maybe a quick scan if needed, just to be safe.
 - Ok
 \doctor: And in the meantime, I want you to take it easy. No late-night studying, no overloading your schedule. Your body’s sending you a message, Lory, and we need to listen to it.

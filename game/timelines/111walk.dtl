@@ -1,5 +1,5 @@
 [background arg="res://Bilder/outside.png" fade="0.0"]
-[sound volume="0.0"]
+[sound path="res://sounds/433593__klankbeeld__walk-woman-park-180613_1266.wav" volume="0.0"]
 join lory (frown_open) center
 Lory got out of the house and starts walking down the street.
 lory: So, made the first step. I'm on the street. It feels strange… to just be here, walking. No deadlines. No emails to check. No one to impress. Just… me. Feels a little unproductive. Where should I go?

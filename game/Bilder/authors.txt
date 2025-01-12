@@ -14,5 +14,5 @@ backgrounds:
 characters: 
 * main character (Lory) = Aiko by Noraneko Games (downloaded from: https://noranekogames.itch.io/aikosprite/download/eyJleHBpcmVzIjoxNzM1OTQzNDA5LCJpZCI6ODcyMzQxfQ%3d%3d.CgfoGJ0haxpXTFSeKnZ4O17GYUY%3d, License: free to use for games with credit
 * doctor = Hana by Noraneko Games (downloaded from: https://noranekogames.itch.io/hana-newstyle-free-character-sprite/download/eyJpZCI6OTUyNzU4LCJleHBpcmVzIjoxNzM1OTQ0MjM3fQ%3d%3d.ryyFk0htV%2bIA%2b1u95ZjEdbfvVxc%3d), License: free to use for games with credit
-* 
+* angel wings by Thy-Darkest-Hour (downloaded from https://www.deviantart.com/thy-darkest-hour/art/Good-and-Evil-Angel-Wings-PNG-258256582), License: free for non-commercial use
 * 

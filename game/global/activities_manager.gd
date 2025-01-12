@@ -2,12 +2,12 @@ extends Node
 # class_name activities_manager
 # this class is autoloaded as a singleton ActivitiesManager (different spelling for clear use)
 # ensures that the dialouge script is loaded in bedroom if it was'nt palyed before (has to be false)
-var timelines_started = true
+var timelines_started = false
 # make 0 for real game
-var counter_walk = 3
-var counter_doctor = 3
-var counter_self_care = 3
-
+var counter_walk = 0
+var counter_doctor = 0
+var counter_self_care = 0
+var counter_gratitude = 0
 var current_day: int = 1
 
 # List of activities planned for each day
@@ -21,11 +21,10 @@ var todays_activities: Array = []
 var num_todays_activity: int = 0 # gets updated when an activity is loaded
 # Global list of activities and their stat impacts
 var activities = [
-	{"label": "Go for a walk", "stat_change": {"health": +20, "mood": +20, "willpower": -20, "stress": -40}},
-	{"label": "Study", "stat_change": {"health": +0,"mood": -4, "willpower": -5,  "stress": +10}},
-	{"label": "Visit doctor", "stat_change": {"health": +5, "mood": +3, "willpower": -4, "stress": -6}},
+	{"label": "Go for a walk", "stat_change": {"health": +7, "mood": +20, "willpower": -10, "stress": -40}},
+	{"label": "Visit doctor", "stat_change": {"health": +10, "mood": +3, "willpower": -4, "stress": -6}},
 	{"label": "Practice mindfulness", "stat_change": {"health": +1, "mood": +4, "willpower": -2, "stress": -7}},
-	{"label": "Write journal", "stat_change": {"health": +1, "mood": +4, "willpower": +3, "stress": -7}},
+	{"label": "Write journal", "stat_change": {"health": +1, "mood": +4, "willpower": +3, "stress": -7}}
 	]
 
 # for testing:
@@ -37,8 +36,10 @@ var all_activities = [
 	{"label": "Go for a walk", "stat_change": {"health": +3, "mood": +6, "willpower": -1, "stress": -8}},
 	{"label": "Read a book", "stat_change": {"health": +1,"mood": +3, "willpower": +2, "stress": -8}},
 	{"label": "Visit doctor", "stat_change": {"health": +5, "mood": +3, "willpower": -4, "stress": -6}},
+	{"label": "Study", "stat_change": {"health": -2,"mood": -4, "willpower": -20,  "stress": +70}},
 	{"label": "Practice mindfulness", "stat_change": {"health": +1, "mood": +4, "willpower": +3, "stress": -7}},
-	{"label": "Write in a journal", "stat_change": {"health": +4, "mood": +5, "willpower": +2, "stress": -6}},
+	{"label": "Write journal", "stat_change": {"health": +1, "mood": +4, "willpower": +3, "stress": -7}},
+	{"label": "???", "stat_change": {"health": +4, "mood": +5, "willpower": +2, "stress": -6}},
 	{"label": "Socialize with friends", "stat_change": {"health": +1, "mood": +10, "willpower": -2, "stress": -7}},
 	{"label": "Go grocery shopping", "stat_change": {"health": +2, "mood": -2, "willpower": -3, "stress": +5}},
 	{"label": "Do laundry", "stat_change": {"health": +1, "mood": -1, "willpower": -2, "stress": +3}},
@@ -149,3 +150,11 @@ func load_next_activity():
 		# Optionally handle end-of-day logic here
 		# Example: Transition to end-of-day summary scene
 		get_tree().change_scene_to_file("res://scenes/review_day.tscn")
+
+func reset_stats() -> void: 
+	timelines_started = false
+	counter_walk = 0
+	counter_doctor = 0
+	counter_self_care = 0
+	current_day = 1
+	counter_gratitude = 0

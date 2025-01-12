@@ -1,7 +1,7 @@
 [background arg="res://Bilder/single bedroom.jpg" fade="0.0"]
 join lory right [mirrored="true"]
 lory (interested): Mhm...
-join angel left [animation="Slide In Down" length="2.0"]
+join angel (smile) left [animation="Slide In Down" length="2.0"]
 angel: Lost in thought again, aren’t you, Lory
 lory (embarassed): Can you blame me? There’s just… so much to think about. Deadlines, classes, what everyone expects of me... And now, this—\
 —doing nothing. It’s suffocating in its own way.

@@ -1,18 +1,31 @@
-[gd_scene load_steps=9 format=3 uid="uid://btg14y20vjhsw"]
+[gd_scene load_steps=11 format=3 uid="uid://btg14y20vjhsw"]
 
 [ext_resource type="Script" path="res://scripts/scene_2_calendar.gd" id="1_y1wlq"]
 [ext_resource type="Texture2D" uid="uid://y8caswi4iq7q" path="res://Bilder/celestial.jpg" id="2_08lso"]
+[ext_resource type="PackedScene" uid="uid://cgomtlfjwengv" path="res://scenes/bedroom_bars.tscn" id="2_uwu2t"]
 [ext_resource type="Script" path="res://scripts/add_activity_test.gd" id="3_clrxg"]
 [ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="3_nw172"]
 [ext_resource type="PackedScene" uid="uid://b8b4wuvjxyoop" path="res://scenes/stats_test_scene.tscn" id="4_yw7ol"]
 [ext_resource type="Script" path="res://scripts/source_container.gd" id="5_1mj5i"]
 [ext_resource type="PackedScene" uid="uid://xq7oam55djhf" path="res://global/pause_manager.tscn" id="5_fuu3h"]
 [ext_resource type="Script" path="res://scripts/target_container.gd" id="9_iro0o"]
+[ext_resource type="PackedScene" uid="uid://bd3fueljn57uy" path="res://scenes/next_activity.tscn" id="9_x76fm"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_y1wlq")
 
+[node name="bedroom_bars" parent="." instance=ExtResource("2_uwu2t")]
+
+[node name="TextureRect2" type="ColorRect" parent="."]
+modulate = Color(0.262745, 0.262745, 0.262745, 0.721569)
+custom_minimum_size = Vector2(200, 200)
+offset_left = -4.0
+offset_top = -2.0
+offset_right = 1165.0
+offset_bottom = 650.0
+
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 modulate = Color(0.458405, 0.458405, 0.458405, 1)
 custom_minimum_size = Vector2(200, 200)
 offset_left = 2.0
@@ -63,13 +76,13 @@ offset_bottom = 341.0
 script = ExtResource("9_iro0o")
 
 [node name="ColorRect" type="ColorRect" parent="target_container"]
-custom_minimum_size = Vector2(200, 100)
+custom_minimum_size = Vector2(200, 320)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="rows" type="VBoxContainer" parent="target_container"]
-custom_minimum_size = Vector2(200, 300)
+custom_minimum_size = Vector2(200, 320)
 layout_mode = 2
 
 [node name="plan_for_day" type="Label" parent="."]
@@ -101,38 +114,12 @@ Once an activity is selected in the \"Plan for today\" you can't change it."
 
 [node name="stats_test_scene" parent="." instance=ExtResource("4_yw7ol")]
 
-[node name="start_day" type="Button" parent="."]
-offset_left = 809.0
-offset_top = 550.0
-offset_right = 989.0
-offset_bottom = 625.0
-theme_override_fonts/font = ExtResource("3_nw172")
-text = "start day"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 121.0
-offset_top = 117.0
-offset_right = 218.0
-offset_bottom = 217.0
-
-[node name="morning" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_nw172")
-text = "Morning"
-
-[node name="midday" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_nw172")
-text = "Midday"
-
-[node name="afternoon" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_nw172")
-text = "Afternoon"
-
 [node name="pause_manager" parent="." instance=ExtResource("5_fuu3h")]
 visible = false
 
+[node name="start_day" parent="." instance=ExtResource("9_x76fm")]
+text = "start day"
+
 [connection signal="mouse_entered" from="source_container" to="source_container" method="_on_mouse_entered"]
 [connection signal="pressed" from="add_activity_test" to="source_container" method="_on_add_activity_test_pressed"]
-[connection signal="pressed" from="start_day" to="." method="_on_start_day_button_pressed"]
+[connection signal="pressed" from="start_day" to="." method="_on_start_day_pressed"]
