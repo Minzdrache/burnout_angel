@@ -1,5 +1,21 @@
-join lory center
-lory: This was a day where I had less chores. It feels a bit strange.
-join angel center [animation="Slide In Down"]
-angel: Today you took care of yourself and explored some helpful techniques.
-set 
+[background arg="res://Bilder/single bedroom.jpg" fade="0.0"]
+join lory right [animation="Slide In Down"]
+lory: This is a time where I have less chores. It feels a bit strange.
+join angel (smile) left [animation="Fade In Down" length="0.9"]
+angel: Today is a chance to take care of yourself.
+lory: Mhm...
+angel: I’d like to teach you something, a practice that can help you shift your focus, little by little. It’s called a gratitude journal.
+lory (frown_closed): A gratitude journal? Sounds... kind of cheesy. Just writing stuff down?
+angel: I understand how it might seem that way, but it’s far more powerful than it sounds. Gratitude is like a light, it doesn’t erase the shadows, but it helps you notice the warmth and beauty around you, even in dark times.
+lory (interested): Okay... so, how does it work?
+angel (neutral): It’s simple. Every day you write down at least three things you’re grateful for. They don’t have to be big or extraordinary. Even the smallest things count.
+lory (frown_open): Like what? I’m not exactly swimming in good things right now.
+angel (smile): That’s why it’s especially important now. For example, you could write about the sound of the rain outside, a hot cup of tea, or even the fact that you made it through another day. The point isn’t to find perfection, it’s to remind yourself of the small moments of comfort, joy, or peace that still exist.
+lory (frown_closed): So... three things a day. And that’s supposed to help?
+angel: Yes. Gratitude rewires your brain, like planting seeds in a garden. At first, it might feel awkward, like the soil is dry and barren. But with time, you’ll notice the seeds growing. Your mind will begin to look for the good on its own, even when life feels overwhelming.
+lory (interested): Huh. I guess I could try it. I mean, it doesn’t sound hard.
+angel (joy): That’s the spirit. Open it up and write something. Every little step counts.
+lory (smile): Alright... I’ll give it a shot. I mean, what’s the worst that could happen?
+angel: The worst? You might smile a little more often. You might find yourself noticing the good in your life more than you expect. And you might just feel a little lighter.
+lory: Okay, angel. I’ll give it a go. Three things a day.
+angel: That’s all it takes, Lory. Just three little things. You’ll see, you’re planting seeds of hope.

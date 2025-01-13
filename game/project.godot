@@ -40,6 +40,7 @@ directories/dtl_directory={
 "104gratitude": "res://Bilder/angel/104gratitude.dtl",
 "110challenges": "res://timelines/110challenges.dtl",
 "111walk": "res://timelines/111walk.dtl",
+"112walk": "res://timelines/112walk.dtl",
 "90end": "res://timelines/90end.dtl",
 "test": "res://test.dtl"
 }
@@ -49,6 +50,7 @@ variables={
 }
 layout/style_list=["res://textbox_styles/style1.tres", "res://textbox_styles/picture.tres", "res://textbox_styles/visual_novel_permade.tres"]
 layout/default_style="res://style1.tres"
+glossary/default_case_sensitive=true
 
 [editor_plugins]
 

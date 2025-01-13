@@ -1,2 +1,4 @@
-hello first timeline
-[signal arg="test"]
+[background arg="res://Bilder/celestial.jpg" fade="0.0"]
+join angel (smile) right [mirrored="true"]
+join lory left [mirrored="true"]
+[wait_input]

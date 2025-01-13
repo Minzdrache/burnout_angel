@@ -1,7 +1,9 @@
 # game_programming
+Author of this game: Minzfee
+
 
 This repo saves my efforts for the class game programming of semester 7 of my artificial intelligence bachelor.
-The game engine is Godot!
+The game engine is Godot 4!
 
 
 progress:
@@ -61,17 +63,14 @@ progress:
     fixed bug: doctor choice looks odd
     added cafe music, added walking sounds
     added picture with facial expressions for angel
-todo:
-    activity_walk dialouge does not get played
-    before journaling: implement a dialouge
-    after mindfullness I can't go on to the journaling
     test dialouges without backgrounds ( so the stat bars show...)
-    make "next" and similar buttons into extra script and include them....
-    
-
+* 13.01.2025
+    fixed bug: activity_walk dialouge does not get played
+    before journaling: implemented a dialouge
 todo:
+    after mindfullness I can't go on to the journaling
+    make "next" and similar buttons into extra script and include them....
     fix font in source and target container of calendar
-    picture with facial expressions for angel (not yet implemented)
     get sounds to all dialouge scenes
     make all buttons in same design (like in main_menu)
    

@@ -152,9 +152,11 @@ func load_next_activity():
 		get_tree().change_scene_to_file("res://scenes/review_day.tscn")
 
 func reset_stats() -> void: 
-	timelines_started = false
+	timelines_started = false # false in real game
 	counter_walk = 0
 	counter_doctor = 0
 	counter_self_care = 0
 	current_day = 1
 	counter_gratitude = 0
+	num_todays_activity = 0
+	todays_activities = []

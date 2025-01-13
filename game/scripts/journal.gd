@@ -73,11 +73,11 @@ func _update_next_activity_button() -> void:
 
 func _on_next_activity_pressed() -> void:
 	# reward for writing journal:
-	var stat_changes_journal= {"health": +1, "mood": +2, "willpower": +10, "stress": -3}
+	# var stat_changes_journal= {"health": +1, "mood": +2, "willpower": +10, "stress": -3}
 	# add activity_journal to the list of activities for today
-	if ActivitiesManager.counter_gratitude > 0: 
-		ActivitiesManager.add_activity_to_day("Write journal", stat_changes_journal, ActivitiesManager.current_day)
-		StatsManager.apply_stat_changes(stat_changes_journal)
+	#if ActivitiesManager.counter_gratitude == 0: 
+		#ActivitiesManager.add_activity_to_day("Write journal", stat_changes_journal, ActivitiesManager.current_day)
+		# StatsManager.apply_stat_changes(stat_changes_journal)
 	ActivitiesManager.counter_gratitude += 1
 	ActivitiesManager.load_next_activity()
 	
