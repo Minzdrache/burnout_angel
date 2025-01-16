@@ -67,6 +67,10 @@ progress:
 * 13.01.2025
     fixed bug: activity_walk dialouge does not get played
     before journaling: implemented a dialouge
+    uploaded game to https://minzfee.itch.io/burnout-angel
+    link to survey: https://minzfee.limesurvey.net/271731
+
+    
 todo:
     after mindfullness I can't go on to the journaling
     make "next" and similar buttons into extra script and include them....
