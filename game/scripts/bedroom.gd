@@ -7,6 +7,10 @@ func _ready():
 		ActivitiesManager.timelines_started = true
 		Dialogic.start("000triggers")
 
+
+# when running: after triggers wait for user to click calendar icon
+
+
 func _on_next_activity_pressed() -> void:
 	ActivitiesManager.load_next_activity()
 	

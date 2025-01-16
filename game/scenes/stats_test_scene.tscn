@@ -1,9 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://b8b4wuvjxyoop"]
+[gd_scene load_steps=21 format=3 uid="uid://b8b4wuvjxyoop"]
 
 [ext_resource type="Script" path="res://scripts/stats_test_scene.gd" id="1_qai11"]
 [ext_resource type="Script" path="res://gui/health_bar.gd" id="2_ha60a"]
 [ext_resource type="Script" path="res://gui/stress_bar.gd" id="2_w4qsa"]
 [ext_resource type="FontFile" uid="uid://b67sne2kgw6ye" path="res://fonts/Berry Rotunda.ttf" id="2_x34gh"]
+[ext_resource type="PackedScene" uid="uid://boawjc1bdargp" path="res://scenes/calendar_icon.tscn" id="3_ndt2i"]
+[ext_resource type="Texture2D" uid="uid://cuq1gidkf2j5u" path="res://Bilder/calendar.png" id="3_sp0ay"]
 [ext_resource type="Script" path="res://gui/mood_bar.gd" id="3_yj5ne"]
 [ext_resource type="Script" path="res://scenes/willpower_bar.gd" id="4_uh3i4"]
 
@@ -14,6 +16,20 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.361542, 0.349371, 0.338906, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rq6r0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.176471, 0.8, 0.8, 0)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_color = Color(0.34902, 0.690196, 0.690196, 0.611765)
+shadow_size = 5
 
 [sub_resource type="Theme" id="Theme_qk5u2"]
 
@@ -115,15 +131,27 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_6y11q")
 
+[node name="calendar_glow" type="Panel" parent="."]
+offset_left = 994.0
+offset_top = 24.0
+offset_right = 1020.0
+offset_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_rq6r0")
+
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 20)
+layout_direction = 2
 offset_left = 30.0
 offset_top = 16.0
 offset_right = 1127.0
-offset_bottom = 56.0
+offset_bottom = 65.0
+size_flags_vertical = 4
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
 modulate = Color(0.933333, 0.384314, 0.384314, 0)
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme = SubResource("Theme_qk5u2")
 texture = SubResource("CanvasTexture_qtws3")
@@ -186,10 +214,25 @@ text = "0"
 
 [node name="TextureRect6" type="TextureRect" parent="HBoxContainer"]
 modulate = Color(0.933333, 0.384314, 0.384314, 0)
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme = SubResource("Theme_qk5u2")
 texture = SubResource("CanvasTexture_qtws3")
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="calendar_icon" parent="HBoxContainer" instance=ExtResource("3_ndt2i")]
+layout_mode = 2
+
+[node name="TextureRect7" type="TextureRect" parent="HBoxContainer"]
+modulate = Color(0.933333, 0.384314, 0.384314, 0)
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+tooltip_text = "your calendar"
+theme = SubResource("Theme_qk5u2")
+texture = ExtResource("3_sp0ay")
 
 [node name="health_bar" type="ProgressBar" parent="."]
 anchors_preset = 1
@@ -209,6 +252,7 @@ show_percentage = false
 script = ExtResource("2_ha60a")
 
 [node name="Label" type="Label" parent="health_bar"]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -232,6 +276,7 @@ offset_right = 211.0
 offset_bottom = 280.0
 grow_horizontal = 0
 rotation = -1.5708
+tooltip_text = "willpower"
 theme_override_styles/background = SubResource("StyleBoxFlat_2gnsa")
 theme_override_styles/fill = SubResource("StyleBoxFlat_4aosh")
 value = 20.0
@@ -239,6 +284,7 @@ show_percentage = false
 script = ExtResource("4_uh3i4")
 
 [node name="Label" type="Label" parent="willpower_bar"]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -262,6 +308,7 @@ offset_right = 211.0
 offset_bottom = 557.0
 grow_horizontal = 0
 rotation = -1.5708
+tooltip_text = "stress"
 theme_override_styles/background = SubResource("StyleBoxFlat_cfntk")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vt54n")
 value = 20.0
@@ -269,6 +316,7 @@ show_percentage = false
 script = ExtResource("2_w4qsa")
 
 [node name="Label" type="Label" parent="stress_bar"]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -292,6 +340,7 @@ offset_right = 1288.0
 offset_bottom = 557.0
 grow_horizontal = 0
 rotation = -1.5708
+tooltip_text = "mood"
 theme_override_styles/background = SubResource("StyleBoxFlat_7qe3l")
 theme_override_styles/fill = SubResource("StyleBoxFlat_t5ecx")
 value = 20.0
@@ -299,6 +348,7 @@ show_percentage = false
 script = ExtResource("3_yj5ne")
 
 [node name="Label" type="Label" parent="mood_bar"]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -312,6 +362,7 @@ rotation = 1.5708
 theme_override_fonts/font = ExtResource("2_x34gh")
 text = "mood"
 
+[connection signal="pressed" from="HBoxContainer/calendar_icon" to="." method="_on_node_2d_pressed"]
 [connection signal="mouse_entered" from="health_bar" to="health_bar" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="health_bar" to="health_bar" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="willpower_bar" to="willpower_bar" method="_on_mouse_entered"]

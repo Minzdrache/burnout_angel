@@ -8,6 +8,7 @@ lory (interested): Weird dream. There are no angels.
 join angel right [animation="Fade In Down"]
 # happy angel
 angel (joy): Good morning! I’m here, and I’m as real as the changes you’re about to make. You’ve taken the first step by deciding you want a better life. Now, let’s figure out how to make that happen.
+# check if bars are visible!
 [background fade="0.0"]
 # make status bars appear
 [signal]
@@ -31,5 +32,6 @@ lory: That’s… a lot to keep track of. What happens if one bar drops too low?
 angel: When one bar is empty, the others will start to suffer. But don’t worry—I’m here to help you keep them balanced. Think of these bars as guides, not rules. You don’t have to be perfect, just mindful.
 angel: Your choices today will affect these bars. Let’s start small—plan your day, listen to what these bars tell you, and remember to take care of yourself. I’ll be here whenever you need guidance.
 lory: Okay. I’ll try. Thank you for showing me this… it feels like I can actually see what’s going on now.
-angel: I think you are ready for the day. It's now time to choose what you want to do. Choose from the activities that boost your willpower. We need more of it to resist overworking and to strengthen your health.
+# show calendar glowing
+angel: I think you are ready to plan the day. It's now time to choose what you want to do. For now, choose just 3 activities.
 leave angel [animation="Fade Out Up"]

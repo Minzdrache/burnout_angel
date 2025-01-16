@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://boawjc1bdargp"]
+
+[ext_resource type="Texture2D" uid="uid://b1j0hl6qasxok" path="res://Bilder/calendar_normal_test.svg" id="1_35wwu"]
+[ext_resource type="Texture2D" uid="uid://cuq1gidkf2j5u" path="res://Bilder/calendar.png" id="1_olh2g"]
+[ext_resource type="Texture2D" uid="uid://duwtjw2ai2oyv" path="res://Bilder/calendar_hover_test.svg" id="2_s2l14"]
+
+[node name="calendar_icon" type="TextureButton"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 30.0
+offset_bottom = 30.0
+tooltip_text = "your calendar"
+texture_normal = ExtResource("1_35wwu")
+texture_hover = ExtResource("2_s2l14")
+
+[node name="Calendar" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(18.25, 17.75)
+scale = Vector2(1.36207, 1.32759)
+texture = ExtResource("1_olh2g")

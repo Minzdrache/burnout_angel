@@ -69,13 +69,19 @@ progress:
     before journaling: implemented a dialouge
     uploaded game to https://minzfee.itch.io/burnout-angel
     link to survey: https://minzfee.limesurvey.net/271731
+* 16.01.2025
+    opened experimental branch develop2
+    added calendar icon to ingame menu on top (with one time glow effect)
 
+    Feedback from users: want dialouge boxes to scroll up, want status bars (I thought  they were visible?)
+         want explanation on how to navigate the game (with space or click)
+    
     
 todo:
     after mindfullness I can't go on to the journaling
     make "next" and similar buttons into extra script and include them....
     fix font in source and target container of calendar
-    get sounds to all dialouge scenes
+    get sounds to all dialouge scenes, and cut the sound of the cafeteria...
     make all buttons in same design (like in main_menu)
    
 

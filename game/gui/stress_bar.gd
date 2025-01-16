@@ -13,7 +13,8 @@ func _process(_delta: float) -> void:
 	self.value = progress
 	
 func _on_mouse_entered() -> void:
-	$Label.show()
-	
+	#$Label.show()
+	pass
 func _on_mouse_exited() -> void:
-	$Label.hide()
+	#$Label.hide()
+	pass

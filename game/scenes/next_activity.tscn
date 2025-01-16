@@ -7,5 +7,6 @@ offset_left = 993.0
 offset_top = 576.0
 offset_right = 1127.0
 offset_bottom = 626.0
+tooltip_text = "Continues to next activity."
 theme_override_fonts/font = ExtResource("1_rw1kd")
 text = "next activity"
