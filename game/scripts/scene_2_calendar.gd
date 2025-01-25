@@ -22,6 +22,7 @@ func _process(_delta: float) -> void:
 func _on_start_day_pressed() -> void:
 	print("start_day_button is pressed")
 	# load activities
-	if ActivitiesManager.todays_activities.size() == 3:
+	if ActivitiesManager.todays_activities.size() == 3:#
+		# ActivitiesManager.load_next_activity()
 		ActivitiesManager.load_activity(ActivitiesManager.todays_activities[0])
 		print("activity: " + str(ActivitiesManager.todays_activities[0]))

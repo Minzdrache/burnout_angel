@@ -1,8 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://boawjc1bdargp"]
 
 [ext_resource type="Texture2D" uid="uid://b1j0hl6qasxok" path="res://Bilder/calendar_normal_test.svg" id="1_35wwu"]
-[ext_resource type="Texture2D" uid="uid://cuq1gidkf2j5u" path="res://Bilder/calendar.png" id="1_olh2g"]
 [ext_resource type="Texture2D" uid="uid://duwtjw2ai2oyv" path="res://Bilder/calendar_hover_test.svg" id="2_s2l14"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdhrm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.176471, 0.8, 0.8, 0)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_color = Color(0.34902, 0.690196, 0.690196, 0.611765)
+shadow_size = 5
 
 [node name="calendar_icon" type="TextureButton"]
 custom_minimum_size = Vector2(40, 40)
@@ -12,9 +25,25 @@ tooltip_text = "your calendar"
 texture_normal = ExtResource("1_35wwu")
 texture_hover = ExtResource("2_s2l14")
 
-[node name="Calendar" type="Sprite2D" parent="."]
+[node name="calendar_glow" type="Panel" parent="."]
+visible = false
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 40.0
+offset_bottom = 42.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_qdhrm")
+
+[node name="Calendar" type="TextureButton" parent="."]
 visible = false
 texture_filter = 1
-position = Vector2(18.25, 17.75)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 0
+offset_left = -4.0
+offset_top = 18.0
+offset_right = 37.0
+offset_bottom = 59.0
 scale = Vector2(1.36207, 1.32759)
-texture = ExtResource("1_olh2g")
+texture_normal = ExtResource("1_35wwu")
+texture_hover = ExtResource("2_s2l14")

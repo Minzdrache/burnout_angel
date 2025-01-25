@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b8b4wuvjxyoop"]
+[gd_scene load_steps=22 format=3 uid="uid://b8b4wuvjxyoop"]
 
 [ext_resource type="Script" path="res://scripts/stats_test_scene.gd" id="1_qai11"]
 [ext_resource type="Script" path="res://gui/health_bar.gd" id="2_ha60a"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://boawjc1bdargp" path="res://scenes/calendar_icon.tscn" id="3_ndt2i"]
 [ext_resource type="Texture2D" uid="uid://cuq1gidkf2j5u" path="res://Bilder/calendar.png" id="3_sp0ay"]
 [ext_resource type="Script" path="res://gui/mood_bar.gd" id="3_yj5ne"]
+[ext_resource type="PackedScene" uid="uid://djyw0u8r76e07" path="res://scenes/calendar_icon_2.tscn" id="4_q8fbm"]
 [ext_resource type="Script" path="res://scenes/willpower_bar.gd" id="4_uh3i4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6y11q"]
@@ -17,7 +18,7 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.361542, 0.349371, 0.338906, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rq6r0"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ee7od"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 1
 border_width_top = 1
@@ -29,7 +30,7 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 shadow_color = Color(0.34902, 0.690196, 0.690196, 0.611765)
-shadow_size = 5
+shadow_size = 10
 
 [sub_resource type="Theme" id="Theme_qk5u2"]
 
@@ -132,20 +133,20 @@ size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_6y11q")
 
 [node name="calendar_glow" type="Panel" parent="."]
-offset_left = 994.0
-offset_top = 24.0
-offset_right = 1020.0
-offset_bottom = 50.0
+offset_left = 986.0
+offset_top = 17.0
+offset_right = 1028.0
+offset_bottom = 55.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_rq6r0")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ee7od")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 custom_minimum_size = Vector2(0, 20)
 layout_direction = 2
 offset_left = 30.0
 offset_top = 16.0
-offset_right = 1127.0
+offset_right = 1081.0
 offset_bottom = 65.0
 size_flags_vertical = 4
 
@@ -225,6 +226,10 @@ layout_mode = 2
 
 [node name="calendar_icon" parent="HBoxContainer" instance=ExtResource("3_ndt2i")]
 layout_mode = 2
+
+[node name="calendar_icon2" parent="HBoxContainer" instance=ExtResource("4_q8fbm")]
+visible = false
+position = Vector2(1086, 4)
 
 [node name="TextureRect7" type="TextureRect" parent="HBoxContainer"]
 modulate = Color(0.933333, 0.384314, 0.384314, 0)

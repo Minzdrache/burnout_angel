@@ -6,6 +6,10 @@ func _ready():
 	if ActivitiesManager.timelines_started == false:
 		ActivitiesManager.timelines_started = true
 		Dialogic.start("000triggers")
+		
+
+
+# hover over bars -> then hide glow
 
 
 # when running: after triggers wait for user to click calendar icon

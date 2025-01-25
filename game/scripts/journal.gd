@@ -5,6 +5,7 @@ var num_saved: int = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_display_previous_days()
+
 	# update next activity button?
 
 # Function to display previous days' information
@@ -79,5 +80,6 @@ func _on_next_activity_pressed() -> void:
 		#ActivitiesManager.add_activity_to_day("Write journal", stat_changes_journal, ActivitiesManager.current_day)
 		# StatsManager.apply_stat_changes(stat_changes_journal)
 	ActivitiesManager.counter_gratitude += 1
+	ActivitiesManager.num_todays_activity += 1 
 	ActivitiesManager.load_next_activity()
 	

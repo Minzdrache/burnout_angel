@@ -29,7 +29,7 @@ script = ExtResource("1_033ob")
 scene = ExtResource("4_htsrg")
 overrides = {
 "box_modulate_custom_color": "Color(0, 0, 0, 1)",
-"box_size": "Vector2(900, 500)",
+"box_size": "Vector2(900, 300)",
 "text_custom_size": "30.0"
 }
 
@@ -69,4 +69,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_033ob")]([])
-metadata/_latest_layer = "12"
+metadata/_latest_layer = "14"

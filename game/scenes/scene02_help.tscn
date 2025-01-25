@@ -14,7 +14,7 @@ modulate_color = Color(0.505344, 0.505344, 0.505344, 1)
 script = ExtResource("1_gsuj8")
 
 [node name="background" type="Panel" parent="."]
-custom_minimum_size = Vector2(400, 400)
+custom_minimum_size = Vector2(60, 400)
 offset_left = -4.0
 offset_top = -1.0
 offset_right = 1148.0
@@ -49,53 +49,47 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(600, 0)
 offset_left = 109.0
 offset_top = 159.0
-offset_right = 1047.0
+offset_right = 1067.0
 offset_bottom = 574.0
 
-[node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-color = Color(1, 1, 1, 0)
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
-layout_mode = 2
-
-[node name="title" type="Label" parent="HBoxContainer/VBoxContainer2"]
+[node name="title" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_ii0gr")
 theme_override_font_sizes/font_size = 30
 text = "Help:"
 
-[node name="padding2" type="ColorRect" parent="HBoxContainer/VBoxContainer2"]
+[node name="padding2" type="ColorRect" parent="VBoxContainer2"]
 custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 color = Color(1, 1, 1, 0)
 
-[node name="help" type="Label" parent="HBoxContainer/VBoxContainer2"]
+[node name="help" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("5_dsgcv")
 theme_override_font_sizes/font_size = 30
-text = "In Germany you can call 122 in life-threatning 
-situations, or call the crisis hotline:  
-0800 1110111 and 0800 1110222 
+text = "* International helplines: https://www.helpguide.org/find-help
+* In Germany you can call 122 in life-threatening 
+   situations, or call the crisis hotline:  0800 1110111 and 0800 1110222 
+
 "
 
-[node name="padding3" type="ColorRect" parent="HBoxContainer/VBoxContainer2"]
+[node name="padding3" type="ColorRect" parent="VBoxContainer2"]
 custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 color = Color(1, 1, 1, 0)
 
-[node name="title4" type="Label" parent="HBoxContainer/VBoxContainer2"]
+[node name="title4" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_ii0gr")
 theme_override_font_sizes/font_size = 30
 text = "Helpful websites:"
 
-[node name="help2" type="Label" parent="HBoxContainer/VBoxContainer2"]
+[node name="help2" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("5_dsgcv")

@@ -75,7 +75,10 @@ progress:
 
     Feedback from users: want dialouge boxes to scroll up, want status bars (I thought  they were visible?)
          want explanation on how to navigate the game (with space or click)
-    
+* 19.01.2025
+    feedback from users implemented
+    calendar glow now bigger 
+    shortened the sound for cafe
     
 todo:
     after mindfullness I can't go on to the journaling

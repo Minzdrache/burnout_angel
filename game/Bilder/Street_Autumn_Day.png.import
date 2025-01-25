@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rbr7yp6fchfk"
-path="res://.godot/imported/Aiko_Casual_Closed_Frown_Blush.png-65a3c5067994301da399c48e78057512.ctex"
+uid="uid://bnxcbtafw6053"
+path="res://.godot/imported/Street_Autumn_Day.png-c02ab8c6cabe99aec144e1634809282b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bilder/character_pictures/Aiko_Casual_Closed_Frown_Blush.png"
-dest_files=["res://.godot/imported/Aiko_Casual_Closed_Frown_Blush.png-65a3c5067994301da399c48e78057512.ctex"]
+source_file="res://Bilder/Street_Autumn_Day.png"
+dest_files=["res://.godot/imported/Street_Autumn_Day.png-c02ab8c6cabe99aec144e1634809282b.ctex"]
 
 [params]
 

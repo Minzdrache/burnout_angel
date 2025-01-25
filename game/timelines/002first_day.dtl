@@ -1,4 +1,5 @@
 # stat bars appear
+[style name="intro_box_smallest"]
 [background arg="res://Bilder/single bedroom.jpg" fade="0.0"]
 # The third timeline. The first day after the emergency. 
 # explain what burnout is? 
@@ -6,6 +7,7 @@ join lory left
 Lory wakes up in her  bedroom, sunlight streaming through the curtains. She sits up, rubbing her eyes, and recalls the dream from the night before. The angel’s voice echoes in her mind\: “Let’s find your balance, together.”
 lory (interested): Weird dream. There are no angels.
 join angel right [animation="Fade In Down"]
+[sound path="res://sounds/angel430892__gsb1039__magic-1-grainsmooth.wav" volume="4.0"]
 # happy angel
 angel (joy): Good morning! I’m here, and I’m as real as the changes you’re about to make. You’ve taken the first step by deciding you want a better life. Now, let’s figure out how to make that happen.
 # check if bars are visible!
@@ -22,9 +24,9 @@ angel: This red one is your Stress. It builds up from overwhelming tasks, diffic
 lory: So stress eats away at everything else? I feel that all the time.
 angel: Yes. And we can find a way to manage it. Moments to pause, breathe, and saying ‘no’ when needed, will lower it.
 # yellow mood
-angel: This yellow orb is your Mood. It reflects how happy or content you feel. A good mood makes challenges easier to handle, but neglecting it can make even small problems feel overwhelming.
+angel: This yellow bar representss your Mood. It reflects how happy or content you feel. A good mood makes challenges easier to handle, but neglecting it can make even small problems feel overwhelming.
 lory: So… if I do things I enjoy, it improves my mood?
-angel: Exactly. Taking breaks, connecting with loved ones, reading a book, and celebrating small wins will keep this bar healthy."
+angel: Exactly. Taking breaks, connecting with loved ones, reading a book, and celebrating small wins will keep this bar healthy.
 # green health
 angel: This green one is your Health. It represents your physical and emotional well-being. Without enough sleep, proper food, or breaks, this bar will deplete—and if it runs out entirely, you’ll hit burnout.
 # lory sad
@@ -33,5 +35,10 @@ angel: When one bar is empty, the others will start to suffer. But don’t worry
 angel: Your choices today will affect these bars. Let’s start small—plan your day, listen to what these bars tell you, and remember to take care of yourself. I’ll be here whenever you need guidance.
 lory: Okay. I’ll try. Thank you for showing me this… it feels like I can actually see what’s going on now.
 # show calendar glowing
-angel: I think you are ready to plan the day. It's now time to choose what you want to do. For now, choose just 3 activities.
+angel: I think you are ready to plan the day. To make sure that you get enough sleep, we'll block that time so nothing else can intervene.
+lory: But... Mhm. Maybe that's a good idea.
+angel: To strengthen your health how about choosing just 3 activities for today?
+lory (frown_closed): That's not enough to get everything done!
+angel: Prioritizing your health is the key to gain your balance. 3 activities can help you focus better. In time and with more health, you can do more activities.
+angel: For now, click on your calendar and  pick 3 things that you want to do.
 leave angel [animation="Fade Out Up"]

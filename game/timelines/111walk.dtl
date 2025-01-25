@@ -1,4 +1,5 @@
-[background arg="res://Bilder/outside.png" fade="0.0"]
+[background arg="res://Bilder/Noraneko_Backgrounds_Pack_2/Street_Autumn_Day.png" fade="0.0"]
+[style name="intro_box_smallest"]
 [sound path="res://sounds/433593__klankbeeld__walk-woman-park-180613_1266.wav" volume="0.0"]
 join lory (frown_open) center
 Lory got out of the house and starts walking down the street.
@@ -15,9 +16,9 @@ Lory walks on. A bird chirps nearby and Lory stops to look at it.
 	lory (interested): That bird… It’s so loud. Is it scolding me? Or cheering me on? Either way, it’s more attention than I’m used to getting.
 A breeze rustles through the leaves.
 join lory (frown_closed) right
-lory (interested): That breeze feels nice. Like a little nudge from the universe. 'Keep going,' it says.
-Lory looks up to see the blooming trees.
-lory (smile): Oh the cherry trees are blooming! They let their peddles flow, like they don't care what anyone thinks.\
+lory (interested): That breeze feels chilly, but refreshing. Like a little nudge from the universe. 'Keep going,' it says.
+Lory looks up to see the colored tree leaves.
+lory (smile): Oh the trees have such a nice color! They let their leaves flow, like they don't care what anyone thinks.\
 Maybe I could learn a thing or two from trees.
 A car drives by, and Lory steps aside.
 update lory rightmost [move_time="0.1"]

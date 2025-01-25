@@ -6,9 +6,9 @@ var counter: int = ActivitiesManager.counter_self_care
 func _ready() -> void:
 	ActivitiesManager.counter_self_care += 1 
 	# only load intro dialouge if it was never called
-	if counter < 2:
+	if counter == 1:
 		Dialogic.start("103mindfulness")
-			# load first doctor timeline
+			
 		
 		
 func _on_next_activity_pressed() -> void:

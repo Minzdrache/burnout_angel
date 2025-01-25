@@ -1,4 +1,5 @@
 [background arg="res://Bilder/single bedroom.jpg" fade="0.0"]
+[style name="intrro_box_small"]
 join lory right [mirrored="true"]
 lory (interested): Mhm...
 join angel (smile) left [animation="Slide In Down" length="2.0"]

@@ -1,7 +1,9 @@
 [background arg="res://Bilder/single bedroom.jpg" fade="0.0"]
+[style name="intrro_box_small"]
 join lory right [animation="Slide In Down"]
 lory: This is a time where I have less chores. It feels a bit strange.
 join angel (smile) left [animation="Fade In Down" length="0.9"]
+[sound path="res://sounds/angel430892__gsb1039__magic-1-grainsmooth.wav" volume="0.0"]
 angel: Today is a chance to take care of yourself.
 lory: Mhm...
 angel: I’d like to teach you something, a practice that can help you shift your focus, little by little. It’s called a gratitude journal.

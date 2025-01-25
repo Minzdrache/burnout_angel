@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://djyw0u8r76e07"]
+
+[ext_resource type="Texture2D" uid="uid://b1j0hl6qasxok" path="res://Bilder/calendar_normal_test.svg" id="1_jsevc"]
+[ext_resource type="Texture2D" uid="uid://duwtjw2ai2oyv" path="res://Bilder/calendar_hover_test.svg" id="2_w2ynk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w1mym"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.176471, 0.8, 0.8, 0)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_color = Color(0.34902, 0.690196, 0.690196, 0.611765)
+shadow_size = 10
+
+[node name="calendar_icon2" type="Node2D"]
+
+[node name="calendar_glow" type="Panel" parent="."]
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 41.0
+offset_bottom = 39.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_w1mym")
+
+[node name="Calendar" type="TextureButton" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(20, 20)
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 34.0
+offset_bottom = 34.0
+scale = Vector2(1.36207, 1.32759)
+texture_normal = ExtResource("1_jsevc")
+texture_hover = ExtResource("2_w2ynk")
+stretch_mode = 3

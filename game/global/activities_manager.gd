@@ -3,6 +3,7 @@ extends Node
 # this class is autoloaded as a singleton ActivitiesManager (different spelling for clear use)
 # ensures that the dialouge script is loaded in bedroom if it was'nt palyed before (has to be false)
 var timelines_started = true
+
 # make 0 for real game
 var counter_walk = 0
 var counter_doctor = 0
@@ -108,7 +109,7 @@ func print_activities_for_day(day: int) -> void:
 # Function to load an activity scene based on the activity label.
 func load_activity(activity: Dictionary):
 	var activity_label = activity["label"]
-	print("load activity: ")
+	print("load_activity: " + activity_label)
 		# Example: Load different scenes based on the activity label.
 	match activity_label:
 		"Go for a walk":
@@ -135,22 +136,19 @@ func load_activity(activity: Dictionary):
 func load_next_activity():
 	# Check if there are activities left for today
 	if todays_activities == []:
-		#get_tree().change_scene_to_file("res://scenes/scene2_calendar.tscn")
-		pass
-	elif num_todays_activity < 3:
+		print("[ActivitiesManager] No activities left for today.")
+		get_tree().change_scene_to_file("res://scenes/scene2_calendar.tscn")
+	elif num_todays_activity < len(todays_activities):
 		# Get the next activity
 		var next_activity = todays_activities[num_todays_activity]
-				# Print the activity being loaded for debugging purposes
+		# Print the activity being loaded for debugging purposes
 		print("[ActivitiesManager] Loading activity: " + next_activity["label"])
-		# Increment the activity counter
-		num_todays_activity += 1
+		#num_todays_activity += 1 
 		# Load the corresponding scene for the activity
 		load_activity(next_activity)
 	else:
 		# All activities for today are completed
 		print("[ActivitiesManager] All activities for today are completed.")
-		# Optionally handle end-of-day logic here
-		# Example: Transition to end-of-day summary scene
 		get_tree().change_scene_to_file("res://scenes/review_day.tscn")
 
 func reset_stats() -> void: 

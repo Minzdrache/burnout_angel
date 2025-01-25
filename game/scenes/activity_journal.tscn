@@ -159,7 +159,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_7wje7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_low2x")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8rkxw")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8jnph")
-text = "Save Entry"
+text = "save entry"
 
 [node name="next_activity" parent="." instance=ExtResource("6_k8cin")]
 
