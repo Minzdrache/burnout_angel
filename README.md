@@ -1,6 +1,7 @@
 # game_programming
 Author of this game: Minzfee
-https://minzfee.itch.io/burnout-angel
+Game on Itch.io: https://minzfee.itch.io/burnout-angel
+Video Pitch on YouTube: https://youtu.be/q4zrjPt8Zxo
 
 This repo saves my efforts for the class game programming of semester 7 of my artificial intelligence bachelor.
 The game engine is Godot 4!
